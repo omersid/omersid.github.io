@@ -9,7 +9,7 @@ I've been reading Deep Nutrition by Dr. Cate Shanahan. I didn't expect to, but w
 
 Anyways, a major motif in the book is aesthetics and form. The message is that beauty is not skin deep. It's an expression of nature. And stop — even human beauty is not reducible to some genetic lottery; peoples far more primitive know this. Beauty is nature's way to express itself; a lack of it should be startling; beauty is not superficial, and should not be ignored. It's a sign.
 
-<img src="/images/fractals.jpg" alt="drawing" width="800"/>
+<img src="/images/fractals.png" alt="drawing" width="800"/>
 
 `My mind yearns for fractals and so does yours.`
 
