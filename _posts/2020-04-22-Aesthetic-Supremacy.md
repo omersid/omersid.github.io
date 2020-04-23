@@ -9,12 +9,11 @@ I've been reading Deep Nutrition by Dr. Cate Shanahan. I didn't expect to, but w
 
 Anyways, a major motif in the book is aesthetics and form. The message is that beauty is not skin deep. It's an expression of nature. And stop — even human beauty is not reducible to some genetic lottery; peoples far more primitive know this. Beauty is nature's way to express itself; a lack of it should be startling; beauty is not superficial, and should not be ignored. It's a sign.
 
-
-<img src="../images/fractals.png" alt="drawing" width="800"/>
+<img src="/images/fractals.jpg" alt="drawing" width="800"/>
 
 `My mind yearns for fractals and so does yours.`
 
-Beauty is not completely objective. Beauty was not taught to us. The natural world is hardwired with fractals. Why wouldn't our brain be. But maybe you knew this already. And this isn't my point. Aesthetics is a tool because beauty is a symptom of things occurring in accordance with nature. Simply, I mean to suggest, our society has forgotten that beauty is about nature. We have constructed systems which do not support this. Usually, in the name of science, or efficiency, or worse — money. 
+Beauty is very objective. Beauty was not taught to us. The natural world is hardwired with fractals and dynamic symmetry. Why wouldn't our brain be. But maybe you knew this already. And this isn't my point. Aesthetics is a tool because beauty is a symptom of things occurring in accordance with nature. Simply, I mean to suggest, our society has forgotten that beauty is about nature. We have constructed systems which do not support this. Usually, in the name of science, or efficiency, or worse — money. 
 
 Within the last century, humans have made decisions removing ourselves from nature using skeptical empiricism and time now exposes these fragilities. The outcome a deepening distance between the human world and the natural. Naive metrics (ala social scientists, WHO) says society is advancing, I will restate this saying there are two forces at work. One advancing society in metrics, and the other is hidden / smoothed over and it is happiness. 
 
