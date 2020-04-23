@@ -4,13 +4,13 @@ title:  "Aesthetic Supremacy"
 date:   2020-04-22 19:00:16 -0400
 categories: idk
 ---
-## Aesthetic Supremacy
 
 I've been reading Deep Nutrition by Dr. Cate Shanahan. I didn't expect to, but within a short time, I've come to believe it to be a necessary read. I can't and I won't explain why.
 
 Anyways, a major motif in the book is aesthetics and form. The message is that beauty is not skin deep. It's an expression of nature. And stop — even human beauty is not reducible to some genetic lottery; peoples far more primitive know this. Beauty is nature's way to express itself; a lack of it should be startling; beauty is not superficial, and should not be ignored. It's a sign.
 
-![](/images/fractals.png)
+
+<img src="../images/fractals.png" alt="drawing" width="800"/>
 
 `My mind yearns for fractals and so does yours.`
 
@@ -34,13 +34,13 @@ tl;dr `if something isn't beautiful. stop being afraid and honestly look into wh
 
 ---
 
-A PostScript that I wrote prior.
+## A P.S. that I wrote prior.
 
 it seems that there is so much to write about, so much to think about, so much to learn, so much to do. the list expands daily — more everyday than i am necessarily able to check off. and there's no time to take solace in what you've done, because that which remains unknown looks at you menacingly. a subtle way of reminding — that which you haven't done, that which you don't know is still important to you. not just psychologically, but deeply in something representative of our nature. 
 
 now i want to explore two points. the knowing of what you don't know, and the knowing of what you haven't done.
 
-knowing of what you don't know is your responsibility. 
+`knowing of what you don't know is your responsibility.`
 
 it protects you from ruin. collect the list of what you want to learn, a library, a list, and let it tower over you. let what you don't know remind you to be deeply open minded, tolerant, and loving. let it demonstrate the nuance between information and wisdom. this demonstrates the purpose in Umberto Eco's library — overemphasizing about what you know is stupid, focus far more on what you dont know. 
 
@@ -52,4 +52,4 @@ Arriverdverci a tutti.
 
 Con amore,
 
-(insert very clever pseudonym / reference here)
+(insert very clever pseudonym here)
