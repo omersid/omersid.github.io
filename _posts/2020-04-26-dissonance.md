@@ -12,11 +12,6 @@ a.visited {
 	text-decoration: underline;
 }
 
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
 h1,
 h2,
 h3 {
@@ -48,18 +43,6 @@ h3 {
 	margin-top: 1.25rem;
 }
 
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
 figure {
 	margin: 1.25em 0;
 	page-break-inside: avoid;
@@ -75,9 +58,6 @@ mark {
 	background-color: transparent;
 }
 
-.indented {
-	padding-left: 1.5em;
-}
 
 hr {
 	background: transparent;
@@ -91,17 +71,6 @@ hr {
 
 img {
 	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
 }
 
 .collection-content {
@@ -295,12 +264,6 @@ img.icon {
 	text-align: center;
 }
 
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	height: 30vh;
-}
 
 .page-header-icon {
 	font-size: 3rem;
@@ -336,11 +299,6 @@ input[type="checkbox"] {
 	transform: scale(1.5);
 	margin-right: 0.6em;
 	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
 }
 
 .image {
@@ -599,7 +557,8 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="a5585370-2d91-4449-a955-5c09d733b7d8" class="page mono"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">❌</span></div><h1 class="page-title">dissonance</h1></header><div class="page-body"><p id="cdfbc43d-8660-4f78-945b-707cce98d9d0" class="">I was looking to find myself wrong, misguided, or something else today. but something more pressing came up to stop me from torturing myself. it doesn&#x27;t matter if I&#x27;m right or wrong... unless I am doing it to others.</p><p id="8e03e2b6-0fd1-41ad-9ca3-bfe61c9a53b2" class="">
+</style>
+<article id="a5585370-2d91-4449-a955-5c09d733b7d8" class="page mono"><img class="page-cover-image" src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">❌</span></div><h1 class="page-title">dissonance</h1></header><div class="page-body"><p id="cdfbc43d-8660-4f78-945b-707cce98d9d0" class="">I was looking to find myself wrong, misguided, or something else today. but something more pressing came up to stop me from torturing myself. it doesn&#x27;t matter if I&#x27;m right or wrong... unless I am doing it to others.</p><p id="8e03e2b6-0fd1-41ad-9ca3-bfe61c9a53b2" class="">
 </p><p id="6d24a01c-a733-46f4-b128-d8133598ef0a" class=""><mark class="highlight-pink">maybe i&#x27;m wrong...</mark></p><p id="3cd62ccc-ecec-4212-bca3-be7e34a61039" class="">
 </p><p id="af54e28b-aff4-4d92-955d-f69e0f80520f" class="">in order to be right, someone has to lose.</p><p id="1f6b2864-e982-4e8a-9e24-ed211ede63fd" class="">
 </p><p id="aceba483-7c1a-428f-b13a-aa966ac043ba" class="">in order to be right about god, science, politics, or what ever else. someone else has to come to the conclusion that they were wrong, or were misguided, or made a little mistake somewhere. </p><p id="d569fbb1-c7c3-41c2-ba60-9415a55878ba" class="">
@@ -637,4 +596,4 @@ blockquote {
 </p><p id="dfc6814b-e805-4c83-bdaa-db7a6068ab66" class="">
 </p><p id="b9e5823a-37ba-4f8c-aa5c-5d81fb435b21" class="">
 </p><p id="3ea98774-e31b-4e56-a5e3-95dbdfea567d" class="">
-</p></div></article></body></html>
+</p></div></article>
