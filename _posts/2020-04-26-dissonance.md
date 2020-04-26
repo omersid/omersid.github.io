@@ -9,7 +9,6 @@ html,
 a,
 a.visited {
 	color: inherit;
-	text-decoration: underline;
 }
 
 h1,
