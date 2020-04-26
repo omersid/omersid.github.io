@@ -1,15 +1,10 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>dissonance</title><style>
+<style>
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
 }
 
 html,
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
 
 a,
 a.visited {
