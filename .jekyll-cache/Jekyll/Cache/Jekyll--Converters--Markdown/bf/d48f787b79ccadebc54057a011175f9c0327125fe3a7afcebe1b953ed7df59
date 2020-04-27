@@ -1,0 +1,626 @@
+I"�`<style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style>
+
+<body><article id="1e14f1a5-fad7-406a-bebf-d2f08f06cecd" class="page sans">
+<div class="page-body"><p id="2163198b-66bd-4051-a323-38481db89d0c" class="">
+</p><nav id="bb880f9c-8d1c-4a73-8d95-4ca6184cfa42" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b6b8ffef-7aeb-403b-93e3-d541a867551b">What Descartes Said</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6102a9a6-35a1-4f25-8c7e-ed14d562e1d4">The Analogy of the Fridge</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#bf215d70-4de1-4c91-a03f-69022f501f88">FRACTALS</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20">Inside me there are galaxies</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3739e36e-d36a-45e7-a7e1-83724e30f78a">So what?</a></div></nav><p id="d6321c41-0ac5-4b87-a5d6-4ee48cf55829" class="">Descartes’s <i>Meditations on First Philosophy</i> gives a strong starting point to start thinking about the world and our relation to it. He demonstrates that what an individual knows for sure is exactly just that they exist: nothing more or less. Though this may seem like alarmingly little, we show that this type of thinking allows for the highest form of meaning. Here we give a quick summary of Descartes’s arguments in the first two meditations (considered the most important) and then (attempt to) consider the (most important) implications of his arguments.</p><h2 id="b6b8ffef-7aeb-403b-93e3-d541a867551b" class="">What Descartes Said</h2><p id="92ce139f-c080-4cea-ab21-6a9d4cd236c2" class="">In the true way of a philosopher or any logical entity, Descartes begins with questioning where he can begin. What can we take as fact? Surely, we need to be careful to not include our biases if we are to get to anything meaningful. But more than that, we need to really be sure we are beginning on solid ground. Descartes notes he can’t tell he is asleep when he is sleeping nor can he <em>a priori</em> rule out the idea of a malicious God with the sole purpose of tricking him. Modern viewers may also throw in that it is unclear if we are in a simulation. These difficulties noted, we find that we can’t trust anything we see or hear. We can’t trust any of our beliefs either. We don’t have much to go off of!</p><p id="3df7b8ea-b030-4d27-8880-a41f25cbbeca" class="">Descartes in his second mediation seizes upon the fixed point- we know that we think. Regardless if we are dreaming or if a demon is tricking us every sense and every thought, we are currently thinking. And since we think, we must exist at least as the one who thinks (we can define ourselves as the one thinking these thoughts and since the thoughts exists, so do we). <em>I think therefore I am</em>. And furthermore, I only know I exist the moment I think and outside of that I can’t know for sure. Later he additionally argues that all we know about ourselves really is that we think and everything else is up for grabs. He also argues that whatever we can “clearly and distinctly” perceives also must exist but this line of thinking is more controversial, and we won’t employ it here.</p><p id="d5013317-5d5a-485a-b0f0-a916df16d836" class="">
+</p><figure id="8a779d28-4367-4f8f-8ddf-30dbe4ca13ed" class="image"><a href="/images/The_Matrix_Poster.jpg"><img style="width:268px" src="/images/The_Matrix_Poster.jpg" /></a><figcaption>Figure 1: Keanu Reeves doesn&#x27;t know he is in a simulation</figcaption></figure><h2 id="6102a9a6-35a1-4f25-8c7e-ed14d562e1d4" class="">The Analogy of the Fridge</h2><p id="4d27d228-368e-4dc2-8276-4c5aa5e21295" class="">So here we are. We each know that we ourselves exist, though the existence of anyone else is unclear (later philosophers will argue that since I know I exist, I can know you exist). This is a monumental moment for not only do we exist, but we know we exist. Existence has come to know itself as such. After a number of experiences, I have come to feel that knowing itself is an inevitable condition of existence, for if it wasn’t, would it even exist? We are reminded of the classic question of whether the fridge light is on when the fridge is closed (ignoring the presence of anything besides you and the fridge). Regardless of the answer, the fact we even theoretically can’t know renders the difference as insignificant to us. Reworded: the same quality that makes it unknowable to an observer makes it irrelevant to that observer. Analogously, existence that doesn’t know itself is irrelevant to itself.</p><figure id="dbf0b354-248c-4a39-a7a5-8f84ec1248fb" class="image"><a href="/images/Fridge_Light.jpg"><img style="width:268px" src="/images/Fridge_Light.jpg" /></a><figcaption>Figure 2: A fridge light is useful for both a midnight snack and a metaphor</figcaption></figure><p id="d9adcf41-29db-4552-b5fa-3a7916994ebc" class="">We are the observes of existence. But then, the argument above can be extended to say that the only relevant existence is that which we interact with. And we only really interact with that which is in our minds as we are beings of thought first and foremost, and thus this is only mode of interaction truly available to us. It is quickly apparent that relevant existence is that which we think about- and I mean we as individuals. We each only know ourselves in the truest sense. And so we come to a break through, existence (or at least the relevant part of it) is that which I can think about. This may feel like mental gymnastics, but if you start with the proposition that “I think so I exist and all I know is that I can think”, it follows quite naturally that the all of universe (that which exists) is exactly which I think about. Furthermore, these aren’t different things- they exist exactly because I can think about them and I can think about them because they exist.</p><p id="37500855-fd1e-4eb0-8e54-d3adfe3e9c71" class="">Now you may think this is problematic. You may say “I can think about unicorns, but they don’t exist”. But in some sense, they do. What are you referring to as a unicorn? Why do you think they don’t exist? You define them as not existing since you believe you can’t perceive one, i.e. you’re defining reality by what can be sensed. But still, the unicorn at least has some formal existence as an idea. And why should a unicorn be any less real than a horse just because we don’t find them on earth? Because of a horn? True reality is in the idea itself, in what the unicorn represents- in what we sense around us, the truest portion isn’t their physical description but the patterns, meanings, and emotional significances they create inside us. We create existence by “observing” or considering an idea.</p><figure id="6d396685-90a3-4e6e-8f3d-0e4d251a27f3" class="image"><a href="/images/Unicorn.jpg"><img style="width:570px" src="/images/Unicorn.jpg" /></a><figcaption>Figure 3: A unicorn. If a kid can imagine it, so can you.</figcaption></figure><p id="4893cec8-21f3-432b-ba24-10cfeb20f28a" class="">
+</p><h2 id="bf215d70-4de1-4c91-a03f-69022f501f88" class="">FRACTALS</h2><p id="d0a19741-d9dc-480b-96f6-7ae2e9ee9d5f" class="">And thus, in each of us is existence. This is highly nontrivial. In each of us is a version of everything. A metaphor for this idea is the ocean and a drop of the ocean. Ignoring atomic constraints, any drop of the ocean is in some way equivalent to the ocean for we just need to zoom in and then we can’t tell the difference (the concentration of all solutes is same in a representative drop as are all physical properties). Specially, a drop of water has all the information that the ocean does (metaphor is for just water and no organisms). The drop can have current, a water cycle, a hurricane, etc. The image is more than just wishful thinking- fractals are mathematical constructions with this exact property of infinite self-similarity. The fact that a fractal can be defined mathematically and there is nothing self-contradictory about an infinitely self-similar construct reveals some deep truth about reality. And far from being some simple shape which trivializes the question, these fractals can have infinitely complex structures as well.</p><p id="206622f3-df19-494e-a0e1-92930f3cea0d" class="">We pause to highlight the amazingness of the infinite self-similarity. We could imagine that there are emergent properties that come from the pieces being together. But an infinitely self-similar shape has those same exact emergent properties already present in each piece, though at a smaller scale. No words can explain this better than watching an animation (and maybe learning the relevant math). Please note that this isn&#x27;t just an animation you are watching but a mathematical truth for how this well defined set looks when zoomed in. </p><figure id="a2d7f1a3-093c-45b4-abec-89bca8bf63a4" class="image"><a href="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif" /></a><figcaption>Figure 4: Zooming into the Mandelbrot set. Note the self-similarity and complexity.</figcaption></figure><h2 id="e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20" class="">Inside me there are galaxies</h2><p id="335c1353-dbcd-4edf-89ac-39ae3be4c947" class="">Taken as a model for the relation of the human (the drop) to the universe (the ocean), we expect that we find everything to ever exist inside of us, albeit at different scales and orientation. All the plot lines to every book or movie, stars in distant planets and quarks in atoms, all feeling ever felt or will be felt all exist inside us, whether or not we are conscious of it. Though this may seem ridiculous at first, it in fact is extremely natural. The fact you can conceive of a planet in a different solar system means you have that inside you. The power of imagination is far more real than we usually realize- if the only objective reality we have is that fact we have thoughts, how can the thoughts we have be insignificant, as people often feel? People will think “So what if I can conceive of the moon, it nearly as real as being there”. But the approach we have taken here points to the exact opposite.</p><p id="0c9fb1c1-dfcb-47fa-a78a-223b4260c956" class="">The reason we feel “being there” is more real than imagining being there is that we over value our sensory perception. Really, we define our reality by our sensory perception most of the time. This is the <em>modus operandi</em> of the human race and, without going into the specifics, there are clear reasons it is that way. What I am pointing out is that for matters of meaning, purpose, and ideas beyond what we can label as actions necessary for survival, this absolute trust of the sense and lack of belief in that which is beyond the senses limits our potential. Surely, that which we perceive is a narrow subset of that which we can imagine. It is even a strict subset of that which we can imagine sensing.</p><figure id="3dad0580-eb18-4270-94ff-0a7d7065d1d8" class="image"><a href="/images/Galaxy.jpg"><img style="width:788px" src="/images/Galaxy.jpg" /></a><figcaption>Figure 5: Galaxies are large and pretty. They exist inside each of us. (Picture courtesy the Hubble Telescope)</figcaption></figure><h2 id="3739e36e-d36a-45e7-a7e1-83724e30f78a" class="">So what?</h2><p id="30cfecff-5c3d-44e0-915e-899af3f271c4" class="">There are many implications of the realization that the universe exists inside each of us. Though your sensory reality may be affected by external factors, you are not a cog in the wheel, you are not a slave to the system, you are not an outsider to existence. I’m driving at a paradigm shift. Your universe would not exist without you. Maybe no one’s would. Sartre says “I am thus responsible for myself and for all men, and I am creating a certain image of man as I would have him to be. In fashioning myself I fashion man.” Each decision you make is a decision on behalf of all of existence, each difficulty you encounter is a difficulty encountered by all of existence, each loss you encounter is a loss to all of existence, each triumph you achieve is a victory for all of existence. The meaning you create is the only meaning that exists. The power of this realization cannot be understated.</p><p id="b0d0b584-6a4a-4759-b204-b1c3dfe4becb" class="">Archimedes theorized with a large enough lever and exactly one fixed point for the fulcrum, he could move the planet with his finger. One fixed point and we can physically move planets! Let the realization that you truly exist and, in finding yourself existing, you also find all of existence inside you be the fixed point, which is unwavering in the face of anything else. From there, you are a conscious part of existence, and in choosing to be so, have the opportunity to create all meaning.</p><figure id="ac15aa14-cc73-421d-94fd-b2014cc97ed7" class="image"><a href="/images/Archimedes_Lever.jpg"><img style="width:640px" src="/images/Archimedes_Lever.jpg" /></a><figcaption>Figure 6: Archimedes just doing his thing.</figcaption></figure><p id="46a84974-afc5-4aa3-ba63-94e121bab4c8" class="">
+</p></div></article></body>
+:ET

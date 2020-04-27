@@ -3,6 +3,7 @@ layout: post
 title:  "Stairway to Heaven"
 date:   2020-04-22 17:00:16 -0400
 categories: music
+permalink: /posts/:title
 ---
 “Stairway to Heaven” by Led Zeppelin is one of the defining songs of American rock and roll. If you haven’t heard it yet, go ahead and give it a listen (link). The instrumental is legendary, and the guitar solo may be one of the best of all time. Here, we’ll take a look into the enigmatic lyrics, armed with the techniques of close reading and analyzing conventions. 
 

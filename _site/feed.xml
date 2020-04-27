@@ -1,4 +1,1270 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-22T19:26:33-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lost in the Sauce</title><subtitle>Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change.</subtitle><entry><title type="html">Stairway to Heaven</title><link href="http://localhost:4000/music/2020/04/22/Stairway-to-Heaven.html" rel="alternate" type="text/html" title="Stairway to Heaven" /><published>2020-04-22T17:00:16-04:00</published><updated>2020-04-22T17:00:16-04:00</updated><id>http://localhost:4000/music/2020/04/22/Stairway-to-Heaven</id><content type="html" xml:base="http://localhost:4000/music/2020/04/22/Stairway-to-Heaven.html">&lt;p&gt;“Stairway to Heaven” by Led Zeppelin is one of the defining songs of American rock and roll. If you haven’t heard it yet, go ahead and give it a listen (link). The instrumental is legendary, and the guitar solo may be one of the best of all time. Here, we’ll take a look into the enigmatic lyrics, armed with the techniques of close reading and analyzing conventions.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-27T14:31:29-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lost in the Sauce</title><subtitle>Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change.</subtitle><entry><title type="html">Fractals 1: A Cartesian Approach to Meaning</title><link href="http://localhost:4000/posts/fractals1" rel="alternate" type="text/html" title="Fractals 1: A Cartesian Approach to Meaning" /><published>2020-04-26T17:00:16-04:00</published><updated>2020-04-26T17:00:16-04:00</updated><id>http://localhost:4000/posts/Fractals1</id><content type="html" xml:base="http://localhost:4000/posts/fractals1">&lt;style&gt;
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+a,
+a.visited {
+	color: inherit;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li &gt; ol:first-child,
+li &gt; ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul &gt; li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list &gt; li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle &gt; li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul &gt; li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol &gt; li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol &gt; li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle &gt; li &gt; details {
+	padding-left: 1.7em;
+}
+
+.toggle &gt; li &gt; details &gt; summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p &gt; .user {
+	opacity: 0.5;
+}
+
+td &gt; .user,
+td &gt; time {
+	white-space: nowrap;
+}
+
+input[type=&quot;checkbox&quot;] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code &gt; code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; }
+.code { font-family: &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, &quot;Yu Mincho&quot;, &quot;Hiragino Mincho ProN&quot;, &quot;Hiragino Mincho Pro&quot;, &quot;Songti TC&quot;, &quot;Songti SC&quot;, &quot;SimSun&quot;, &quot;Nanum Myeongjo&quot;, NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, &quot;Yu Mincho&quot;, &quot;Hiragino Mincho ProN&quot;, &quot;Hiragino Mincho Pro&quot;, &quot;Songti TC&quot;, &quot;Songti SC&quot;, &quot;SimSun&quot;, &quot;Nanum Myeongjo&quot;, NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E&quot;);
+}
+
+.checkbox-off {
+	background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E&quot;);
+}
+	
+&lt;/style&gt;
+
+&lt;body&gt;&lt;article id=&quot;1e14f1a5-fad7-406a-bebf-d2f08f06cecd&quot; class=&quot;page sans&quot;&gt;
+&lt;div class=&quot;page-body&quot;&gt;&lt;p id=&quot;2163198b-66bd-4051-a323-38481db89d0c&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;nav id=&quot;bb880f9c-8d1c-4a73-8d95-4ca6184cfa42&quot; class=&quot;block-color-gray table_of_contents&quot;&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#b6b8ffef-7aeb-403b-93e3-d541a867551b&quot;&gt;What Descartes Said&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#6102a9a6-35a1-4f25-8c7e-ed14d562e1d4&quot;&gt;The Analogy of the Fridge&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#bf215d70-4de1-4c91-a03f-69022f501f88&quot;&gt;FRACTALS&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20&quot;&gt;Inside me there are galaxies&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#3739e36e-d36a-45e7-a7e1-83724e30f78a&quot;&gt;So what?&lt;/a&gt;&lt;/div&gt;&lt;/nav&gt;&lt;p id=&quot;d6321c41-0ac5-4b87-a5d6-4ee48cf55829&quot; class=&quot;&quot;&gt;Descartes’s &lt;i&gt;Meditations on First Philosophy&lt;/i&gt; gives a strong starting point to start thinking about the world and our relation to it. He demonstrates that what an individual knows for sure is exactly just that they exist: nothing more or less. Though this may seem like alarmingly little, we show that this type of thinking allows for the highest form of meaning. Here we give a quick summary of Descartes’s arguments in the first two meditations (considered the most important) and then (attempt to) consider the (most important) implications of his arguments.&lt;/p&gt;&lt;h2 id=&quot;b6b8ffef-7aeb-403b-93e3-d541a867551b&quot; class=&quot;&quot;&gt;What Descartes Said&lt;/h2&gt;&lt;p id=&quot;92ce139f-c080-4cea-ab21-6a9d4cd236c2&quot; class=&quot;&quot;&gt;In the true way of a philosopher or any logical entity, Descartes begins with questioning where he can begin. What can we take as fact? Surely, we need to be careful to not include our biases if we are to get to anything meaningful. But more than that, we need to really be sure we are beginning on solid ground. Descartes notes he can’t tell he is asleep when he is sleeping nor can he &lt;em&gt;a priori&lt;/em&gt; rule out the idea of a malicious God with the sole purpose of tricking him. Modern viewers may also throw in that it is unclear if we are in a simulation. These difficulties noted, we find that we can’t trust anything we see or hear. We can’t trust any of our beliefs either. We don’t have much to go off of!&lt;/p&gt;&lt;p id=&quot;3df7b8ea-b030-4d27-8880-a41f25cbbeca&quot; class=&quot;&quot;&gt;Descartes in his second mediation seizes upon the fixed point- we know that we think. Regardless if we are dreaming or if a demon is tricking us every sense and every thought, we are currently thinking. And since we think, we must exist at least as the one who thinks (we can define ourselves as the one thinking these thoughts and since the thoughts exists, so do we). &lt;em&gt;I think therefore I am&lt;/em&gt;. And furthermore, I only know I exist the moment I think and outside of that I can’t know for sure. Later he additionally argues that all we know about ourselves really is that we think and everything else is up for grabs. He also argues that whatever we can “clearly and distinctly” perceives also must exist but this line of thinking is more controversial, and we won’t employ it here.&lt;/p&gt;&lt;p id=&quot;d5013317-5d5a-485a-b0f0-a916df16d836&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;figure id=&quot;8a779d28-4367-4f8f-8ddf-30dbe4ca13ed&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/The_Matrix_Poster.jpg&quot;&gt;&lt;img style=&quot;width:268px&quot; src=&quot;/images/The_Matrix_Poster.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 1: Keanu Reeves doesn&amp;#x27;t know he is in a simulation&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;6102a9a6-35a1-4f25-8c7e-ed14d562e1d4&quot; class=&quot;&quot;&gt;The Analogy of the Fridge&lt;/h2&gt;&lt;p id=&quot;4d27d228-368e-4dc2-8276-4c5aa5e21295&quot; class=&quot;&quot;&gt;So here we are. We each know that we ourselves exist, though the existence of anyone else is unclear (later philosophers will argue that since I know I exist, I can know you exist). This is a monumental moment for not only do we exist, but we know we exist. Existence has come to know itself as such. After a number of experiences, I have come to feel that knowing itself is an inevitable condition of existence, for if it wasn’t, would it even exist? We are reminded of the classic question of whether the fridge light is on when the fridge is closed (ignoring the presence of anything besides you and the fridge). Regardless of the answer, the fact we even theoretically can’t know renders the difference as insignificant to us. Reworded: the same quality that makes it unknowable to an observer makes it irrelevant to that observer. Analogously, existence that doesn’t know itself is irrelevant to itself.&lt;/p&gt;&lt;figure id=&quot;dbf0b354-248c-4a39-a7a5-8f84ec1248fb&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Fridge_Light.jpg&quot;&gt;&lt;img style=&quot;width:268px&quot; src=&quot;/images/Fridge_Light.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 2: A fridge light is useful for both a midnight snack and a metaphor&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;d9adcf41-29db-4552-b5fa-3a7916994ebc&quot; class=&quot;&quot;&gt;We are the observes of existence. But then, the argument above can be extended to say that the only relevant existence is that which we interact with. And we only really interact with that which is in our minds as we are beings of thought first and foremost, and thus this is only mode of interaction truly available to us. It is quickly apparent that relevant existence is that which we think about- and I mean we as individuals. We each only know ourselves in the truest sense. And so we come to a break through, existence (or at least the relevant part of it) is that which I can think about. This may feel like mental gymnastics, but if you start with the proposition that “I think so I exist and all I know is that I can think”, it follows quite naturally that the all of universe (that which exists) is exactly which I think about. Furthermore, these aren’t different things- they exist exactly because I can think about them and I can think about them because they exist.&lt;/p&gt;&lt;p id=&quot;37500855-fd1e-4eb0-8e54-d3adfe3e9c71&quot; class=&quot;&quot;&gt;Now you may think this is problematic. You may say “I can think about unicorns, but they don’t exist”. But in some sense, they do. What are you referring to as a unicorn? Why do you think they don’t exist? You define them as not existing since you believe you can’t perceive one, i.e. you’re defining reality by what can be sensed. But still, the unicorn at least has some formal existence as an idea. And why should a unicorn be any less real than a horse just because we don’t find them on earth? Because of a horn? True reality is in the idea itself, in what the unicorn represents- in what we sense around us, the truest portion isn’t their physical description but the patterns, meanings, and emotional significances they create inside us. We create existence by “observing” or considering an idea.&lt;/p&gt;&lt;figure id=&quot;6d396685-90a3-4e6e-8f3d-0e4d251a27f3&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Unicorn.jpg&quot;&gt;&lt;img style=&quot;width:570px&quot; src=&quot;/images/Unicorn.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 3: A unicorn. If a kid can imagine it, so can you.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;4893cec8-21f3-432b-ba24-10cfeb20f28a&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;h2 id=&quot;bf215d70-4de1-4c91-a03f-69022f501f88&quot; class=&quot;&quot;&gt;FRACTALS&lt;/h2&gt;&lt;p id=&quot;d0a19741-d9dc-480b-96f6-7ae2e9ee9d5f&quot; class=&quot;&quot;&gt;And thus, in each of us is existence. This is highly nontrivial. In each of us is a version of everything. A metaphor for this idea is the ocean and a drop of the ocean. Ignoring atomic constraints, any drop of the ocean is in some way equivalent to the ocean for we just need to zoom in and then we can’t tell the difference (the concentration of all solutes is same in a representative drop as are all physical properties). Specially, a drop of water has all the information that the ocean does (metaphor is for just water and no organisms). The drop can have current, a water cycle, a hurricane, etc. The image is more than just wishful thinking- fractals are mathematical constructions with this exact property of infinite self-similarity. The fact that a fractal can be defined mathematically and there is nothing self-contradictory about an infinitely self-similar construct reveals some deep truth about reality. And far from being some simple shape which trivializes the question, these fractals can have infinitely complex structures as well.&lt;/p&gt;&lt;p id=&quot;206622f3-df19-494e-a0e1-92930f3cea0d&quot; class=&quot;&quot;&gt;We pause to highlight the amazingness of the infinite self-similarity. We could imagine that there are emergent properties that come from the pieces being together. But an infinitely self-similar shape has those same exact emergent properties already present in each piece, though at a smaller scale. No words can explain this better than watching an animation (and maybe learning the relevant math). Please note that this isn&amp;#x27;t just an animation you are watching but a mathematical truth for how this well defined set looks when zoomed in. &lt;/p&gt;&lt;figure id=&quot;a2d7f1a3-093c-45b4-abec-89bca8bf63a4&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 4: Zooming into the Mandelbrot set. Note the self-similarity and complexity.&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20&quot; class=&quot;&quot;&gt;Inside me there are galaxies&lt;/h2&gt;&lt;p id=&quot;335c1353-dbcd-4edf-89ac-39ae3be4c947&quot; class=&quot;&quot;&gt;Taken as a model for the relation of the human (the drop) to the universe (the ocean), we expect that we find everything to ever exist inside of us, albeit at different scales and orientation. All the plot lines to every book or movie, stars in distant planets and quarks in atoms, all feeling ever felt or will be felt all exist inside us, whether or not we are conscious of it. Though this may seem ridiculous at first, it in fact is extremely natural. The fact you can conceive of a planet in a different solar system means you have that inside you. The power of imagination is far more real than we usually realize- if the only objective reality we have is that fact we have thoughts, how can the thoughts we have be insignificant, as people often feel? People will think “So what if I can conceive of the moon, it nearly as real as being there”. But the approach we have taken here points to the exact opposite.&lt;/p&gt;&lt;p id=&quot;0c9fb1c1-dfcb-47fa-a78a-223b4260c956&quot; class=&quot;&quot;&gt;The reason we feel “being there” is more real than imagining being there is that we over value our sensory perception. Really, we define our reality by our sensory perception most of the time. This is the &lt;em&gt;modus operandi&lt;/em&gt; of the human race and, without going into the specifics, there are clear reasons it is that way. What I am pointing out is that for matters of meaning, purpose, and ideas beyond what we can label as actions necessary for survival, this absolute trust of the sense and lack of belief in that which is beyond the senses limits our potential. Surely, that which we perceive is a narrow subset of that which we can imagine. It is even a strict subset of that which we can imagine sensing.&lt;/p&gt;&lt;figure id=&quot;3dad0580-eb18-4270-94ff-0a7d7065d1d8&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Galaxy.jpg&quot;&gt;&lt;img style=&quot;width:788px&quot; src=&quot;/images/Galaxy.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 5: Galaxies are large and pretty. They exist inside each of us. (Picture courtesy the Hubble Telescope)&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;3739e36e-d36a-45e7-a7e1-83724e30f78a&quot; class=&quot;&quot;&gt;So what?&lt;/h2&gt;&lt;p id=&quot;30cfecff-5c3d-44e0-915e-899af3f271c4&quot; class=&quot;&quot;&gt;There are many implications of the realization that the universe exists inside each of us. Though your sensory reality may be affected by external factors, you are not a cog in the wheel, you are not a slave to the system, you are not an outsider to existence. I’m driving at a paradigm shift. Your universe would not exist without you. Maybe no one’s would. Sartre says “I am thus responsible for myself and for all men, and I am creating a certain image of man as I would have him to be. In fashioning myself I fashion man.” Each decision you make is a decision on behalf of all of existence, each difficulty you encounter is a difficulty encountered by all of existence, each loss you encounter is a loss to all of existence, each triumph you achieve is a victory for all of existence. The meaning you create is the only meaning that exists. The power of this realization cannot be understated.&lt;/p&gt;&lt;p id=&quot;b0d0b584-6a4a-4759-b204-b1c3dfe4becb&quot; class=&quot;&quot;&gt;Archimedes theorized with a large enough lever and exactly one fixed point for the fulcrum, he could move the planet with his finger. One fixed point and we can physically move planets! Let the realization that you truly exist and, in finding yourself existing, you also find all of existence inside you be the fixed point, which is unwavering in the face of anything else. From there, you are a conscious part of existence, and in choosing to be so, have the opportunity to create all meaning.&lt;/p&gt;&lt;figure id=&quot;ac15aa14-cc73-421d-94fd-b2014cc97ed7&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Archimedes_Lever.jpg&quot;&gt;&lt;img style=&quot;width:640px&quot; src=&quot;/images/Archimedes_Lever.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 6: Archimedes just doing his thing.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;46a84974-afc5-4aa3-ba63-94e121bab4c8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;/body&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dissonance</title><link href="http://localhost:4000/2020/04/26/dissonance.html" rel="alternate" type="text/html" title="Dissonance" /><published>2020-04-26T00:00:00-04:00</published><updated>2020-04-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/04/26/dissonance</id><content type="html" xml:base="http://localhost:4000/2020/04/26/dissonance.html">&lt;style&gt;
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+
+a,
+a.visited {
+	color: inherit;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li &gt; ol:first-child,
+li &gt; ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul &gt; li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list &gt; li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle &gt; li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul &gt; li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol &gt; li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol &gt; li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle &gt; li &gt; details {
+	padding-left: 1.7em;
+}
+
+.toggle &gt; li &gt; details &gt; summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p &gt; .user {
+	opacity: 0.5;
+}
+
+td &gt; .user,
+td &gt; time {
+	white-space: nowrap;
+}
+
+input[type=&quot;checkbox&quot;] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code &gt; code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; }
+.code { font-family: &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, &quot;Yu Mincho&quot;, &quot;Hiragino Mincho ProN&quot;, &quot;Hiragino Mincho Pro&quot;, &quot;Songti TC&quot;, &quot;Songti SC&quot;, &quot;SimSun&quot;, &quot;Nanum Myeongjo&quot;, NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, &quot;Yu Mincho&quot;, &quot;Hiragino Mincho ProN&quot;, &quot;Hiragino Mincho Pro&quot;, &quot;Songti TC&quot;, &quot;Songti SC&quot;, &quot;SimSun&quot;, &quot;Nanum Myeongjo&quot;, NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E&quot;);
+}
+
+.checkbox-off {
+	background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E&quot;);
+}
+	
+&lt;/style&gt;
+
+&lt;article id=&quot;a5585370-2d91-4449-a955-5c09d733b7d8&quot; class=&quot;page mono&quot;&gt;&lt;img class=&quot;page-cover-image&quot; src=&quot;https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&amp;amp;q=85&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=srgb&quot; style=&quot;object-position:center 50%&quot; /&gt;&lt;div class=&quot;page-header-icon page-header-icon-with-cover&quot;&gt;&lt;span class=&quot;icon&quot;&gt;❌&lt;/span&gt;&lt;/div&gt;&lt;h1 class=&quot;page-title&quot;&gt;dissonance&lt;/h1&gt;&lt;div class=&quot;page-body&quot;&gt;&lt;p id=&quot;cdfbc43d-8660-4f78-945b-707cce98d9d0&quot; class=&quot;&quot;&gt;I was looking to find myself wrong, misguided, or something else today. but something more pressing came up to stop me from torturing myself. it doesn&amp;#x27;t matter if I&amp;#x27;m right or wrong... unless I am harming others.&lt;/p&gt;&lt;p id=&quot;8e03e2b6-0fd1-41ad-9ca3-bfe61c9a53b2&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;6d24a01c-a733-46f4-b128-d8133598ef0a&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-pink&quot;&gt;maybe i&amp;#x27;m wrong...&lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;3cd62ccc-ecec-4212-bca3-be7e34a61039&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;af54e28b-aff4-4d92-955d-f69e0f80520f&quot; class=&quot;&quot;&gt;in order to be right, someone has to lose.&lt;/p&gt;&lt;p id=&quot;1f6b2864-e982-4e8a-9e24-ed211ede63fd&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;aceba483-7c1a-428f-b13a-aa966ac043ba&quot; class=&quot;&quot;&gt;in order to be right about god, science, politics, or what ever else. someone else has to come to the conclusion that they were wrong, or were misguided, or made a little mistake somewhere. &lt;/p&gt;&lt;p id=&quot;d569fbb1-c7c3-41c2-ba60-9415a55878ba&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;dc667c37-7970-4214-9a70-37c5ddd730a8&quot; class=&quot;&quot;&gt;Egoistically, it is not enough for one to feel right about something and not try to explain that to others. If i believe I&amp;#x27;m right, is it not my duty to explain that to others. The foundational ideas of proselytization, the war for truth is deep in human nature, and has so  been exploited.&lt;/p&gt;&lt;p id=&quot;d0ca3ff8-4c1a-4a79-ab4c-4e0dfb9e06cf&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;2024f423-5a00-4442-a772-ff8a5d04f445&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-pink&quot;&gt;the only arbiter of truth is time, and math.&lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;039c089a-f033-4c31-b117-339454ca89bd&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;5321fad7-d098-4207-a054-f28477aef74e&quot; class=&quot;&quot;&gt;most beliefs cannot be right. simply, because, you are rarely strictly right. more often you are just not wrong yet. Sadly, the real issue here is that humans don&amp;#x27;t like being wrong which allows them to stay safe in their mind. if you wish to point out that someone is wrong, you will have to deal with being disliked. if you shatter the ground on which people stand (religion, or other centralized dogmatic belief), you must ask yourself — did you provide them another ground, before dropping them into the chaos of cognitive dissonance.&lt;/p&gt;&lt;p id=&quot;4299aeea-b9fc-434b-8bf3-55f424e3a2fb&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;85cefba0-df90-42e8-9427-3b5dedbad0ff&quot; class=&quot;&quot;&gt;In plato&amp;#x27;s Euthyphro we have socrates; engaging in an argument, and he asks his opponent to define &amp;#x27;piety&amp;#x27;. Socrates asks questions as though he does not know the answer, and has Euthyphro happily create the definitions, which he will be forced into contradicting. As a reprise, Socrates is sentenced to death in the Apology, for such things.&lt;/p&gt;&lt;p id=&quot;78ac801b-2bfc-4076-a07e-42163ea980bf&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;acab5d6a-f33a-4b9a-9b4e-c3a7edc32f67&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-orange&quot;&gt;theres a lesson in there&lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;89ee93a4-6402-407c-8e3d-764936a5155d&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;b9420c0d-5380-4a47-a8f4-ee2417226a8e&quot; class=&quot;&quot;&gt;this brings me to the question, asked by those wanting to change something, make things better. probably asked by so so many people.&lt;/p&gt;&lt;p id=&quot;6d7c35c6-d120-4c12-829c-355fb5c27b37&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;1e778075-22ed-4301-8124-bfa8b05410c7&quot; class=&quot;&quot;&gt;how do you change the world ? and maybe then the better question - how do you change the world without an absolute truth, (which is to say without exposing others to the consequences of being wrong — because you might be wrong).&lt;/p&gt;&lt;p id=&quot;5c809501-4a6b-4b0f-8ca1-d22b1520cf4c&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;c5221f8a-e014-4e2e-906a-b6dc7ea2d6c4&quot; class=&quot;&quot;&gt;religions and various other &amp;#x27;isms&amp;#x27; seem to have basically implemented,  teaching infallibility, and then using dissonance to make sure people stay. of course they have their merits, but if something is easy to enter and hard to leave. how then is it not a trap — just like Socrates.&lt;/p&gt;&lt;p id=&quot;0f3e3f32-0db7-488d-b6f4-37aa6db4cfa8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;8fd1e560-c795-4b3a-afb7-fd48667e194a&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-pink&quot;&gt;its not a trap if its right... &lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;887984c3-0c65-45af-86ba-b02b5e8a1734&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;adeede3e-43e8-4d4e-b98f-ddee9c71babc&quot; class=&quot;&quot;&gt;anyways, back to simply changing the world. solving problems. We want to to be doing it without exposing vulnerabilities in society, without causing unrest, without people losing their faith in the world. &lt;/p&gt;&lt;p id=&quot;5c4c291a-b67f-4cd3-a3c4-d096a03ce350&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;588c72b1-7b4e-4aef-8401-27f11e6d180f&quot; class=&quot;&quot;&gt;in order to fix america&amp;#x27;s health right now. what pretty much would have to be done, is have the government, and doctors say yeah we&amp;#x27;re sorry we didn&amp;#x27;t realize our mistake when we said it XX years ago. But you should trust us now with this new information. that is obviously a bad fix.&lt;/p&gt;&lt;p id=&quot;8bcff372-f3f6-48ef-8d55-22cff7292b79&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;3b470de6-70ce-4654-8086-61a813de150d&quot; class=&quot;&quot;&gt;sure rapid catastrophic changes can be good in the long run. but in thinking thats the best way, is definitely crazy. because it seems to neglect loss is harder to stomach, than gain.&lt;/p&gt;&lt;p id=&quot;378e7222-3ce7-4b47-9c04-0ca0fdd94ccd&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;e47b64d1-76fc-4ba9-80c3-3ae9dc848d79&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-pink&quot;&gt;to fix things, people have to want to be wrong...  &lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;dc455902-a4d1-4a28-9e37-a907ffae067b&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;20b51dec-5c9b-4309-a2a4-f5460b8a098b&quot; class=&quot;&quot;&gt;with certain things its easy to want to be wrong. I want to be wrong about nutrition, urban planning, climate, economy because it&amp;#x27;s easy to see things aren&amp;#x27;t working as they might ideally, even without all of the random scientist&amp;#x27;s confounding variables. &lt;/p&gt;&lt;p id=&quot;ef5b6f10-7520-445c-8c8c-59b7d16e86b3&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;3f5aba32-59c7-4594-b5ef-1c97893ba590&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-red&quot;&gt;if something isn&amp;#x27;t working; it doesn&amp;#x27;t work.&lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;e945d418-6bb6-4dfb-ad7e-21d97cf82cce&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;563b2e19-d3de-413d-a596-3be4b2ee2168&quot; class=&quot;&quot;&gt;If people don&amp;#x27;t want to be wrong, usually they have something to lose, its quite human of them. So many people don&amp;#x27;t seem to understand that. And I believe, all you can do to change their minds is plant seeds and let time nurture them slowly, carefully. If you don&amp;#x27;t have time, maybe tell there there moms to tell them or something.&lt;/p&gt;&lt;p id=&quot;a0c27159-86d2-4984-8080-36460aab5a7a&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;bba6779e-a937-4b12-8cff-7eae741b5aef&quot; class=&quot;&quot;&gt;Time will remove what is wrong. But by then you will be long gone. don&amp;#x27;t try to fix the world out of pride, or revenge, its to murky. Don&amp;#x27;t exploit someones ignorance.&lt;/p&gt;&lt;p id=&quot;6c0cd2de-5dd1-4892-b824-085443551ca8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;ed8ee9b9-2dc3-4b1d-a9cd-a14bf06d375e&quot; class=&quot;&quot;&gt;as i write this. I&amp;#x27;m struck that there&amp;#x27;s important nuance here. I&amp;#x27;m only saying that to make me feel better to protect myself and feel safe. &lt;/p&gt;&lt;p id=&quot;7dc7ecf6-f008-449e-b926-a699374de92e&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;33de90fd-8e10-471e-bb73-fdae0fd78d96&quot; class=&quot;&quot;&gt;so fine. Expose those who expose others. Call out those who cause the ruin of others. Ignorance is fine, I respect it as a noble solution to the problem of knowledge. But f**k those who cause ruin for others. Sometimes that ruin is so easy to see.&lt;/p&gt;&lt;p id=&quot;6cb65438-19df-4ed3-93ff-a409c462eb5c&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;0ca52411-0508-4308-b206-d5171fdb0d99&quot; class=&quot;&quot;&gt;BUT D**N, we are back to loss aversion, how can i hurt people to help people. I must extend something better. in something like climate change, we have economic interests in fossil fuels conflicting with the planetary interest in solar panels. The issue is politics plays on two things, the working man who is employed by fossil fuels vs. the rich movie stars who speak for the climate. And in the same way, the poor affected by diminishing air qualities, crops, diseases vs some oil billionaire. Did either side extend solutions for the other ?&lt;/p&gt;&lt;p id=&quot;8bbfa885-df4a-45cd-8e1f-bbe82b4fa083&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;6cc22ebc-afde-420b-ac68-0b6768b6e6dc&quot; class=&quot;&quot;&gt;God, stop giving us trolley problems and asking the majority to pull the lever. &lt;/p&gt;&lt;p id=&quot;48059e06-1151-40b3-b603-96ef2d38470a&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;bd03cf07-7ed2-4ff4-9604-82c576e341b4&quot; class=&quot;&quot;&gt;the trolley problem is the worst. luckily this isn&amp;#x27;t a philosophy textbook. you and nature simultaneously write the rules. remove the tracks, build another track, get the people off the tracks, stop the goddamn train. do them all at once, and just f**king hope you did it in time.&lt;/p&gt;&lt;p id=&quot;8cfa56e6-7dd1-4e3d-994a-9ea5f64ed5d8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;c3273ad5-c91e-4942-b25e-5e9c24f60008&quot; class=&quot;&quot;&gt;its not a game, and i don&amp;#x27;t mean to game-ify it. but seriously, does anyone qualified to try even try these days. &lt;/p&gt;&lt;p id=&quot;aa3ea781-06a5-4e60-a76b-8688dcb3e80b&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;c96fb6c5-94ba-4a51-87c9-c82c1ad0f1ef&quot; class=&quot;&quot;&gt;i really didn&amp;#x27;t expect to get here. but IT&amp;#x27;S TIME TO BUILD.&lt;/p&gt;&lt;p id=&quot;3e3901ff-f5df-48d3-937e-5814865a978b&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;7662cb76-312a-4faa-be29-09db5945b543&quot; class=&quot;&quot;&gt;Sorry, I had to. Anyways, righting the ship. I don&amp;#x27;t mean to provide non-practical statements. but I don&amp;#x27;t have time to do everything myself. you shouldn&amp;#x27;t care too much to show that you are right, that you have read more, that you have considered this and that and that. you will get to it eventually. don&amp;#x27;t beat yourself up about it now.&lt;/p&gt;&lt;p id=&quot;7eee5cea-439f-4291-9ab7-d1a887f85426&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;83e43e53-0792-42f0-917b-4f3aca5e1863&quot; class=&quot;&quot;&gt;remember you ain&amp;#x27;t s**t and neither is anyone else.&lt;/p&gt;&lt;p id=&quot;fd5ed3c1-5435-4a18-ad25-f3b542b37529&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;58722ba8-4924-4025-97c6-d941cdf42478&quot; class=&quot;&quot;&gt;if you wanted to be really smart, you&amp;#x27;d have provided a constructive solution to the problem. people probably know it exists already.&lt;/p&gt;&lt;p id=&quot;c9200f1f-6aa9-47cd-a1ae-8c36daeb45ed&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;19db59a7-4f78-446c-8bca-4ce3f4cbd068&quot; class=&quot;&quot;&gt;ultimately, you should be concerned with harm associated with knowledge. is not fixing this gonna hurt ? is fixing this gonna hurt ? &lt;/p&gt;&lt;p id=&quot;7b0c63b7-fb12-46ef-b172-da3f265bf693&quot; class=&quot;&quot;&gt;and ultimately how can i make the fix not hurt ? this doesn&amp;#x27;t have to be a zero sum game for anyone if you do things slowly, and carefully. &lt;/p&gt;&lt;p id=&quot;0dea8674-ddce-416e-b6e5-960a1cbd9e4b&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;803ca634-a18f-4a98-8d0d-753b94c3cedd&quot; class=&quot;&quot;&gt;hopefully i answered my question...&lt;/p&gt;&lt;p id=&quot;386237e1-a9e6-454a-b8b1-93689d516899&quot; class=&quot;&quot;&gt; &lt;/p&gt;&lt;p id=&quot;a5bf5cd3-7d69-4a63-8e61-62efae4a2440&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;004ccebf-b138-4066-a507-39e14ba99ebd&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;62b28e4a-083c-4f2e-9818-f94465b889c2&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;dfc6814b-e805-4c83-bdaa-db7a6068ab66&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;b9e5823a-37ba-4f8c-aa5c-5d81fb435b21&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;3ea98774-e31b-4e56-a5e3-95dbdfea567d&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Aesthetic Supremacy</title><link href="http://localhost:4000/idk/2020/04/22/Aesthetic-Supremacy.html" rel="alternate" type="text/html" title="Aesthetic Supremacy" /><published>2020-04-22T19:00:16-04:00</published><updated>2020-04-22T19:00:16-04:00</updated><id>http://localhost:4000/idk/2020/04/22/Aesthetic-Supremacy</id><content type="html" xml:base="http://localhost:4000/idk/2020/04/22/Aesthetic-Supremacy.html">&lt;p&gt;I’ve been reading Deep Nutrition by Dr. Cate Shanahan. I didn’t expect to, but within a short time, I’ve come to believe it to be a necessary read. I can’t and I won’t explain why.&lt;/p&gt;
+
+&lt;p&gt;Anyways, a major motif in the book is aesthetics and form. The message is that beauty is not skin deep. It’s an expression of nature. And stop — even human beauty is not reducible to some genetic lottery; peoples far more primitive know this. Beauty is nature’s way to express itself; a lack of it should be startling; beauty is not superficial, and should not be ignored. It’s a sign.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fractals.png&quot; alt=&quot;drawing&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;My mind yearns for fractals and so does yours.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Beauty is very objective. Beauty was not taught to us. The natural world is hardwired with fractals and dynamic symmetry. Why wouldn’t our brain be. But maybe you knew this already. And this isn’t my point. Aesthetics is a tool because beauty is a symptom of things occurring in accordance with nature. Simply, I mean to suggest, our society has forgotten that beauty is about nature. We have constructed systems which do not support this. Usually, in the name of science, or efficiency, or worse — money.&lt;/p&gt;
+
+&lt;p&gt;Within the last century, humans have made decisions removing ourselves from nature using skeptical empiricism and time now exposes these fragilities. The outcome a deepening distance between the human world and the natural. Naive metrics (ala social scientists, WHO) says society is advancing, I will restate this saying there are two forces at work. One advancing society in metrics, and the other is hidden / smoothed over and it is happiness.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;the world likes noise, variation, it makes it stronger. stop exposing it to catastrophe, smoothing small problems over. &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;your mind yearns for fractals, variations, noise. why wouldn't the economy, government, your body, ecosystems... need for it too?&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Modern medicine is smoothing over the symptoms of our disconnect to natural food and environments with ever more complex treatments. Maybe we should have looked into the source of our lack of beauty. The myopia, stunted jaw growth, obesity, autoimmune conditions, cancer. These are signs of our modern failings rather than an opportunity to smooth it over with a new pill, and create and encourage an entirely new way for humans to suffer.&lt;/p&gt;
+
+&lt;p&gt;In the same fashion …&lt;/p&gt;
+
+&lt;p&gt;Governments prop up institutions so large, over optimized, because they cannot fail. A company merges to protect itself from competing. The individual dodges a problem, until the problem engulfs them. Nature demands failures, bottom up and top down. The epidemic exposes fragilities of globalism, without strong localism.&lt;/p&gt;
+
+&lt;p&gt;I’m far from believing we’re without hope. The world is a complex complex system. It’s beyond resilient.&lt;/p&gt;
+
+&lt;p&gt;tl;dr &lt;code class=&quot;highlighter-rouge&quot;&gt;if something isn't beautiful. stop being afraid and honestly look into why&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-ps-that-i-wrote-prior&quot;&gt;A P.S. that I wrote prior.&lt;/h2&gt;
+
+&lt;p&gt;it seems that there is so much to write about, so much to think about, so much to learn, so much to do. the list expands daily — more everyday than i am necessarily able to check off. and there’s no time to take solace in what you’ve done, because that which remains unknown looks at you menacingly. a subtle way of reminding — that which you haven’t done, that which you don’t know is still important to you. not just psychologically, but deeply in something representative of our nature.&lt;/p&gt;
+
+&lt;p&gt;now i want to explore two points. the knowing of what you don’t know, and the knowing of what you haven’t done.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;knowing of what you don't know is your responsibility.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;it protects you from ruin. collect the list of what you want to learn, a library, a list, and let it tower over you. let what you don’t know remind you to be deeply open minded, tolerant, and loving. let it demonstrate the nuance between information and wisdom. this demonstrates the purpose in Umberto Eco’s library — overemphasizing about what you know is stupid, focus far more on what you dont know.&lt;/p&gt;
+
+&lt;p&gt;this is not to belittle your accomplishments, or to tell you you are not an expert in something. that you can’t be confident in something. but to somehow behold yourself to larger forces of complexity against the heuristics of the human mind.&lt;/p&gt;
+
+&lt;p&gt;now… what you haven’t done. the meaning here is profoundly different than knowing what you don’t know. ‘doing’ requires effort, risk, time, luck — things that are not cheap. ‘doing’ requires more than just openness. So, I want to express that I’m writing what i want to do, not as some contract that stipulates that i cannot be happy until X Y Z are fulfilled. Rather to consider these wants stoically. With a deep understanding that at any moment you want to be ready to die, and not to feel regret. The honest belief that when you became awakened you did everything you could, with whatever you had.&lt;/p&gt;
+
+&lt;p&gt;Arriverdverci a tutti.&lt;/p&gt;
+
+&lt;p&gt;Con amore,&lt;/p&gt;
+
+&lt;p&gt;(insert very clever pseudonym here)&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been reading Deep Nutrition by Dr. Cate Shanahan. I didn’t expect to, but within a short time, I’ve come to believe it to be a necessary read. I can’t and I won’t explain why.</summary></entry><entry><title type="html">Stairway to Heaven</title><link href="http://localhost:4000/posts/Stairway-to-Heaven" rel="alternate" type="text/html" title="Stairway to Heaven" /><published>2020-04-22T17:00:16-04:00</published><updated>2020-04-22T17:00:16-04:00</updated><id>http://localhost:4000/posts/Stairway-to-Heaven</id><content type="html" xml:base="http://localhost:4000/posts/Stairway-to-Heaven">&lt;p&gt;“Stairway to Heaven” by Led Zeppelin is one of the defining songs of American rock and roll. If you haven’t heard it yet, go ahead and give it a listen (link). The instrumental is legendary, and the guitar solo may be one of the best of all time. Here, we’ll take a look into the enigmatic lyrics, armed with the techniques of close reading and analyzing conventions.&lt;/p&gt;
 
 &lt;p&gt;An important part of the lyrics that is immediately clear is the usage of extended metaphors and symbolism. These metaphors establish a tone and invoke certain feelings in the listener without exactly fleshing out any specific message from the band. Instead, the metaphors and symbols rely on broad pattern recognition, allowing for a high degree of generalizability and for creative interpretations unique to the listener.&lt;/p&gt;
 
@@ -94,20 +1360,4 @@
 
 &lt;p&gt;In a live performance, Jimmy Page begins with “This is a song of hope”. There is a humanistic thread throughout that humans don’t need to look upward and instead have the capacity themselves to unite and usher in the dawn of a new day. It is with this hope that we ultimately aim to find the tune and spread it to others.&lt;/p&gt;
 
-&lt;p&gt;https://www.youtube.com/watch?v=6hBLHkmBKDg&lt;/p&gt;</content><author><name></name></author><summary type="html">“Stairway to Heaven” by Led Zeppelin is one of the defining songs of American rock and roll. If you haven’t heard it yet, go ahead and give it a listen (link). The instrumental is legendary, and the guitar solo may be one of the best of all time. Here, we’ll take a look into the enigmatic lyrics, armed with the techniques of close reading and analyzing conventions.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/04/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-21T17:00:16-04:00</published><updated>2020-04-21T17:00:16-04:00</updated><id>http://localhost:4000/jekyll/update/2020/04/21/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/21/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;https://www.youtube.com/watch?v=6hBLHkmBKDg&lt;/p&gt;</content><author><name></name></author><summary type="html">“Stairway to Heaven” by Led Zeppelin is one of the defining songs of American rock and roll. If you haven’t heard it yet, go ahead and give it a listen (link). The instrumental is legendary, and the guitar solo may be one of the best of all time. Here, we’ll take a look into the enigmatic lyrics, armed with the techniques of close reading and analyzing conventions.</summary></entry></feed>
