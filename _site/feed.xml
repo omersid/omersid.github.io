@@ -1,4 +1,638 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-27T14:31:29-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lost in the Sauce</title><subtitle>Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change.</subtitle><entry><title type="html">Fractals 1: A Cartesian Approach to Meaning</title><link href="http://localhost:4000/posts/fractals1" rel="alternate" type="text/html" title="Fractals 1: A Cartesian Approach to Meaning" /><published>2020-04-26T17:00:16-04:00</published><updated>2020-04-26T17:00:16-04:00</updated><id>http://localhost:4000/posts/Fractals1</id><content type="html" xml:base="http://localhost:4000/posts/fractals1">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-02T00:10:03-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lost in the Sauce</title><subtitle>Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change.</subtitle><entry><title type="html">Signaling Freedom ?</title><link href="http://localhost:4000/posts/signalling-freedom" rel="alternate" type="text/html" title="Signaling Freedom ?" /><published>2020-05-01T17:00:16-04:00</published><updated>2020-05-01T17:00:16-04:00</updated><id>http://localhost:4000/posts/Signalling-Freedom</id><content type="html" xml:base="http://localhost:4000/posts/signalling-freedom">&lt;style&gt;
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+a,
+a.visited {
+	color: inherit;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li &gt; ol:first-child,
+li &gt; ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul &gt; li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list &gt; li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle &gt; li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul &gt; li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol &gt; li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol &gt; li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle &gt; li &gt; details {
+	padding-left: 1.7em;
+}
+
+.toggle &gt; li &gt; details &gt; summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p &gt; .user {
+	opacity: 0.5;
+}
+
+td &gt; .user,
+td &gt; time {
+	white-space: nowrap;
+}
+
+input[type=&quot;checkbox&quot;] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code &gt; code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; }
+.code { font-family: &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, &quot;Yu Mincho&quot;, &quot;Hiragino Mincho ProN&quot;, &quot;Hiragino Mincho Pro&quot;, &quot;Songti TC&quot;, &quot;Songti SC&quot;, &quot;SimSun&quot;, &quot;Nanum Myeongjo&quot;, NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, &quot;Yu Mincho&quot;, &quot;Hiragino Mincho ProN&quot;, &quot;Hiragino Mincho Pro&quot;, &quot;Songti TC&quot;, &quot;Songti SC&quot;, &quot;SimSun&quot;, &quot;Nanum Myeongjo&quot;, NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E&quot;);
+}
+
+.checkbox-off {
+	background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E&quot;);
+}
+	
+&lt;/style&gt;
+
+&lt;body&gt;&lt;article id=&quot;b8882c31-f1da-4eab-815f-5e47377e1a05&quot; class=&quot;page serif&quot;&gt;&lt;header&gt;&lt;img class=&quot;page-cover-image&quot; src=&quot;https://images.unsplash.com/photo-1526041092449-209d556f7a32?ixlib=rb-1.2.1&amp;amp;q=85&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=srgb&quot; style=&quot;object-position:center 50%&quot; /&gt;&lt;div class=&quot;page-header-icon page-header-icon-with-cover&quot;&gt;&lt;span class=&quot;icon&quot;&gt;🎆&lt;/span&gt;&lt;/div&gt;&lt;h1 class=&quot;page-title&quot;&gt;Non-Costly Signalling&lt;/h1&gt;&lt;/header&gt;&lt;div class=&quot;page-body&quot;&gt;&lt;p id=&quot;d59fb0b2-c775-4964-af4b-e0ee4bf2aacf&quot; class=&quot;&quot;&gt;&lt;mark class=&quot;highlight-red&quot;&gt;all the world is a stage and all my life is a heuristic.&lt;/mark&gt;&lt;/p&gt;&lt;p id=&quot;18aa6dee-303f-4f6f-8d6e-a74470bdd8c0&quot; class=&quot;block-color-red&quot;&gt;i yearn for the world with equality, but must with great pain settle that I make it fair.&lt;/p&gt;&lt;hr id=&quot;0f958c60-230b-418f-8a99-c9d0e42ce5af&quot; /&gt;&lt;p id=&quot;46365b6c-c148-4abb-b2ef-acbd1ea26747&quot; class=&quot;&quot;&gt;&lt;code&gt;there isn&amp;#x27;t enough olive oil in the world for all of us.&lt;/code&gt; &lt;/p&gt;&lt;p id=&quot;5737007d-2100-4eee-b2e8-94c5ec8063e4&quot; class=&quot;&quot;&gt;&lt;code&gt;true freedom is expensive&lt;/code&gt; &lt;code&gt;bless those who have made it cheaper&lt;/code&gt;&lt;/p&gt;&lt;p id=&quot;d95f3240-acfc-414a-9e32-dd4da604f4a2&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;c4c1f4bf-7697-4882-b0f8-2ee2f8a4cd58&quot; class=&quot;&quot;&gt;I began this note to evaluate signaling theory, virtue signaling, skin in the game and whatnot. And found I could not evaluate them without breaking them.  That with everything that I write about — only heuristics are given.&lt;/p&gt;&lt;p id=&quot;e0254d63-0809-471a-9933-9095ce3d1c55&quot; class=&quot;&quot;&gt;Signalling theory is a framework for understanding communication between individuals in th light of evolution usually. The premise is generally that individuals are communicating their evolutionary fitness to others. With humans, we have a bit more complex issue  because we get to &amp;#x27;think&amp;#x27; and can  &amp;#x27;choose&amp;#x27; things, whereas we assume animals cannot.&lt;/p&gt;&lt;p id=&quot;cc22ad75-20de-4e2c-874b-9e86a602f2b7&quot; class=&quot;&quot;&gt;... so still pretty easy to see some signalling. &lt;/p&gt;&lt;div id=&quot;697740e5-bbd8-4c8e-b3fe-3256a639aced&quot; class=&quot;column-list&quot;&gt;&lt;div id=&quot;27e6707f-20f1-4cb4-bda5-653536baea6c&quot; style=&quot;width:50%&quot; class=&quot;column&quot;&gt;&lt;figure id=&quot;14d545d4-87cd-40b8-83df-ec3c77f7187e&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/frog.png&quot;&gt;&lt;img style=&quot;width:240px&quot; src=&quot;/images/frog.png&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div id=&quot;7368c59d-0fdb-44fa-84c1-51b261ef477c&quot; style=&quot;width:50%&quot; class=&quot;column&quot;&gt;&lt;figure id=&quot;125fab90-68cf-4f46-bf15-f5f7d57007d3&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/peacock.png&quot;&gt;&lt;img style=&quot;width:336px&quot; src=&quot;/images/peacock.png&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;p id=&quot;bc0b5a77-0410-4e84-84a4-31e5be3c8f58&quot; class=&quot;&quot;&gt;Dangerous frogs, and pretty birds.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p id=&quot;9a0bc430-b2a4-40b1-862f-09763f824862&quot; class=&quot;&quot;&gt;In humans, maybe at base we are signalling reproductive fitness, but sadly once we figured that out, things got worse. Nevertheless, fitness is best considered at system level. I cannot super rigorously evaluate an individuals fitness, without assuming things about the world we live in.  Anyways, I don&amp;#x27;t truly believe that  everything is just reproductive fitness for humans... or maybe&lt;div class=&quot;indented&quot;&gt;&lt;p id=&quot;1800c399-a85b-4d0f-bdec-0a66ed0b02d9&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;&lt;figure id=&quot;70e6945b-b19a-41a2-aba9-87a375e06cb3&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/allsex.png&quot;&gt;&lt;img style=&quot;width:500px&quot; src=&quot;/images/allsex.png&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;                    There is no such thing as a product. Don&amp;#x27;t ever think there is.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;ba3ee823-e693-4b93-b13d-83ed8ef652f6&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;293db6aa-4338-477f-95da-c45cdd23e34b&quot; class=&quot;&quot;&gt;The source of this post was this article below, and a bit of reading on the Veblen&amp;#x27;s Leisure class, and signalling.&lt;/p&gt;&lt;figure id=&quot;8ecdb7c2-b7fc-429f-a301-1c85920ee3dc&quot;&gt;&lt;a href=&quot;https://quillette.com/2019/11/16/thorstein-veblens-theory-of-the-leisure-class-a-status-update/&quot; class=&quot;bookmark source&quot;&gt;&lt;div class=&quot;bookmark-info&quot;&gt;&lt;div class=&quot;bookmark-text&quot;&gt;&lt;div class=&quot;bookmark-title&quot;&gt;Thorstein Veblen&amp;#x27;s Theory of the Leisure Class-A Status Update - Quillette&lt;/div&gt;&lt;div class=&quot;bookmark-description&quot;&gt;I was bewildered when I encountered a new social class at Yale four years ago: the luxury belief class. My confusion wasn&amp;#x27;t surprising given my unusual background. When I was two years old, my mother was addicted to drugs and my father abandoned us.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;bookmark-href&quot;&gt;&lt;img src=&quot;https://i0.wp.com/d24fkeqntp1r7r.cloudfront.net/wp-content/uploads/2019/05/16053149/cropped-Q-1.png?fit=192%2C192&amp;amp;ssl=1&quot; class=&quot;icon bookmark-icon&quot; /&gt;https://quillette.com/2019/11/16/thorstein-veblens-theory-of-the-leisure-class-a-status-update/&lt;/div&gt;&lt;/div&gt;&lt;img src=&quot;https://i0.wp.com/d24fkeqntp1r7r.cloudfront.net/wp-content/uploads/2019/11/16205527/PCKX6B.jpg?fit=1500%2C1000&amp;amp;ssl=1&quot; class=&quot;bookmark-image&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;p id=&quot;ccf405d5-80b9-41c6-bf32-378888ed92b8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;135f5ff0-a7be-4ea1-a0f0-c04af315b1dd&quot; class=&quot;&quot;&gt;My feeling was mixed. The ideas presented by Veblen presented that status signalling by the leisure class (wealthy folks et al.) would cause problems for the lower classes, and society in general.  It seems some ideas have merit, but I couldn&amp;#x27;t back everything up.  The ideas presented would suggest given some world with two classes. The class with more freedom, money, etc, would attempt to distinguish themselves from the other by doing things only they could do. So maybe one might have had a car, or servants or something back then.  But eventually, the main idea presented is that when non-leisurers would attempt to emulate this, they would some how cause ruin for themselves, because usually these things require freedom and optionality at some base level. My conclusion from this argument was that freedom is irreplaceable; that you should not &lt;strong&gt;blindly&lt;/strong&gt; want the trappings come with it; that&amp;#x27;s a false god. &lt;/p&gt;&lt;p id=&quot;0d181b61-2c32-4974-9bc9-22edd46d49d0&quot; class=&quot;&quot;&gt;...now despite circularity I explain my argument&lt;/p&gt;&lt;p id=&quot;21cb76ba-7208-4498-980f-d7bff7f95f00&quot; class=&quot;&quot;&gt; &lt;/p&gt;&lt;blockquote id=&quot;c4340c60-8186-404a-b026-e884b1a2e4eb&quot; class=&quot;&quot;&gt;In order to gain and to hold the esteem of men it is not sufficient merely to possess wealth or power. The wealth or power must be put in evidence, for esteem is awarded only on evidence. - Veblen&lt;/blockquote&gt;&lt;p id=&quot;5b86f756-b13e-4f6e-944a-63485ba4dd0a&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;71518faf-7d81-4db1-ad97-0415ae595ea4&quot; class=&quot;&quot;&gt;So maybe thats true... what might be examples of this. I&amp;#x27;m afraid to say that even though I don&amp;#x27;t believe the theory completely; the phenomena is evident. I understand this could be due to some human bias, but we shall see.&lt;/p&gt;&lt;p id=&quot;5a2939cd-a83b-4ca7-aaf3-d91b580182a7&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;46433fb6-215a-4015-b7eb-06aeafdb846d&quot; class=&quot;&quot;&gt;The wikipedia article on the Leisure class provides a couple of examples, but I don&amp;#x27;t see the merit in all of these, because I&amp;#x27;m not sure how to define the &lt;code&gt;wealthy&lt;/code&gt; &lt;code&gt;leisure&lt;/code&gt; class for each case. Anyways...&lt;div class=&quot;indented&quot;&gt;&lt;p id=&quot;fbed14ca-d534-4608-8fb8-d10caae87491&quot; class=&quot;&quot;&gt;Organized Religion. Social Etiquette. Sports. Housewife&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;&lt;p id=&quot;d647253c-af2a-4c26-90a2-56b9dcaa6a4e&quot; class=&quot;&quot;&gt;And here are some modern examples.&lt;div class=&quot;indented&quot;&gt;&lt;p id=&quot;f773c42b-22b9-4127-9579-caf89e5b918c&quot; class=&quot;&quot;&gt;Sexual Norms —&amp;gt; Reduced Marriage Success&lt;/p&gt;&lt;p id=&quot;c46bf902-d045-4bea-a6d1-225290407548&quot; class=&quot;&quot;&gt;Technology —&amp;gt; Social Problems&lt;/p&gt;&lt;p id=&quot;4e277b57-1d2f-4e25-a9f7-59ddb1735e8c&quot; class=&quot;&quot;&gt;Modern Scientific Diet —&amp;gt; Obesity&lt;/p&gt;&lt;p id=&quot;0becf7b9-3212-4276-bd3b-c4a1566df128&quot; class=&quot;&quot;&gt;Higher Education —&amp;gt; Debt&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;&lt;p id=&quot;f21afdd6-17f6-4500-a7cf-0b32d1932e4d&quot; class=&quot;&quot;&gt;The leisure class doesn&amp;#x27;t evade these problems completely and I&amp;#x27;m not completely sure that the &lt;code&gt;leisure class&lt;/code&gt; caused all these problems. I&amp;#x27;d probably have to resend us back to being hunter gatherers before I can get around the fact that the more technology and society — the more inequality. Technology and Society concentrate power, but not without merit.&lt;/p&gt;&lt;p id=&quot;bf5cbc89-ea9f-43cc-85e3-2e03e83b1b98&quot; class=&quot;&quot;&gt;My main point is that at some point the &amp;quot;rich&amp;quot; get to ignore the problems, because they were free to start with. The technology case is epitomized by silicon valley, who espoused technological integration in human life, to discover later that no they didn&amp;#x27;t want their kids using iPads at their private schools after making sure that every public school had one. Identifying this phenomenon is  useless: it is known.&lt;/p&gt;&lt;p id=&quot;2fa836be-d96e-450d-b70d-bd2830238fc5&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;blockquote id=&quot;32ca1251-6940-49c7-bf69-9948783195a9&quot; class=&quot;&quot;&gt;things can be made cheap. but freedom is still expensive&lt;/blockquote&gt;&lt;p id=&quot;e37c033e-cd6a-4c6c-a473-06b597db9251&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;3d168244-6e52-4f27-b9a6-97bbaedcde6c&quot; class=&quot;&quot;&gt;The Quillete article I referenced, also talks about &lt;code&gt;luxury beliefs&lt;/code&gt; . Today material goods aren&amp;#x27;t expensive.  No matter the social class, you have some more conveniences that previous generations did not. The fact is that now we made most neccessities cheap, even if there are expensive versions. Things aren&amp;#x27;t freedom anymore. &lt;/p&gt;&lt;p id=&quot;97fb4f8f-80ca-4afd-a96f-3a9103c6042d&quot; class=&quot;&quot;&gt;Freedom is a feeling — a level of control of whatever world you&amp;#x27;re in. &lt;/p&gt;&lt;p id=&quot;233fed67-972d-4bbb-b893-fadff311bb0c&quot; class=&quot;&quot;&gt;Today, we have luxury beliefs to distinguish people with freedom. The entire idea disgusts me. Luxury beliefs are things only rich people get to have; usually because they sound good theoretically and won&amp;#x27;t  hurt them too much. Legalize all the drugs, no vaccinations, open borders, &amp;#x27;privilege&amp;#x27; ... Theres less skin in the game for rich people, because they have savings.  And for the non-leisure class these things maybe hurt or maybe don&amp;#x27;t hurt (can depends on scale). &lt;/p&gt;&lt;p id=&quot;8ef1e364-70f1-4362-b3d9-16cc55055914&quot; class=&quot;&quot;&gt;So as usual... I&amp;#x27;m at a point where I find a problem. I don&amp;#x27;t like the cause, and I dont truly know the solution.  —- Freedom is better and its expensive. Making it cheap is an ordeal.&lt;/p&gt;&lt;hr id=&quot;f764442a-f923-496e-bf8c-ac53cf06e80b&quot; /&gt;&lt;p id=&quot;ffe2922b-b5c6-4d2a-b931-a8991e2c45b1&quot; class=&quot;&quot;&gt;When I originally began this article. I was attempting to show my disgust at signalling without cost. So I took a walk... and I smoothed that over. Signalling was mostly disgusting because I didn&amp;#x27;t like who/what was signalling.  Also sometimes signaling isn&amp;#x27;t even signaling its just doing what you&amp;#x27;d normally do, but people taking it out of context.&lt;/p&gt;&lt;p id=&quot;dec965b1-45ae-4bc4-b7eb-b50cd844a7b9&quot; class=&quot;&quot;&gt;Signaling is human nature. We need to express proof of work in whatever it is without wasting time. We want to &lt;strong&gt;trust&lt;/strong&gt;, and this is a nice way to do it. Signaling is a heuristic — embodying I don&amp;#x27;t know if this is the perfect idea, but from the look of it its pretty good. Aesthetics, Risk, Credentials whatever — they each attempt to show something, without showing it.&lt;/p&gt;&lt;p id=&quot;cd19096d-62ec-432a-bb5b-a6a24421ab31&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;50f325ed-a886-4cce-8035-2a2e2815c75f&quot; class=&quot;&quot;&gt;Freedom is so easy to fake. Too easy to fake. Just copy the people, institutions, that are the &lt;code&gt;best&lt;/code&gt; and we are good. Copy Harvard, influencers, wealthy, whatever...&lt;/p&gt;&lt;p id=&quot;832e1248-d161-46d1-adb6-1c1a48d0f7f8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;c4473d82-4d29-4ba1-bb8b-bb88d33e6165&quot; class=&quot;&quot;&gt;I am going to criticize and applaud signaling. Everything we do is a signal. This article is a signal, my thoughts are a signal, the clothes I wear, the health I keep. Its just communication. Just beware of it. I can&amp;#x27;t not signal at some point. I can&amp;#x27;t tell anyone to stop trying to look free. Looking free sometimes just means you&amp;#x27;re free. Form follows function. &lt;/p&gt;&lt;p id=&quot;7638859b-bb44-45ec-9cd0-d975501c2c15&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;26e49f7b-3093-4fdb-94f8-cae5cf824650&quot; class=&quot;&quot;&gt;The entire point of this is that even beliefs today are luxury goods. I shan&amp;#x27;t be telling you anything. Signalling is so weird, very subjective when it involved humans. Silicon Valley got free enough, they realized they should wear drab clothes. Thats a signal (maybe they didn&amp;#x27;t want it to be), everyone may not respond the same way.  &lt;/p&gt;&lt;p id=&quot;c6153475-8e98-46e4-9a2b-7c54e6b12bf5&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;39fdb9d4-fb04-41f8-a0fe-f22db50367ef&quot; class=&quot;&quot;&gt;BEWARE OF SIGNALING... its too easy to fall for, because it makes sense sometimes.  Or maybe don&amp;#x27;t beware of it.  Do what you want to do. Just be careful. :) &lt;/p&gt;&lt;hr id=&quot;2ee9928d-3581-4025-a757-96d752426b20&quot; /&gt;&lt;p id=&quot;633d176f-a199-4702-b233-30be835dee9e&quot; class=&quot;&quot;&gt;Now...I couldn&amp;#x27;t find my way to the idea of costly signaling. But it&amp;#x27;s important because when things have risk — you are more believable.&lt;/p&gt;&lt;p id=&quot;a20c682d-3b36-479c-9f9d-ba563646d848&quot; class=&quot;&quot;&gt;The ability to take risks itself implies you are decently free. You have money, or are healthy, or are whatever. Either that or you have nothing, no liabilities to look after. This is it.  A billionare can give away 99% of his wealth, you cannot. For the leisure class the risk is always comparatively small — so they can do whatever they want. They can start a business, or pay for college, or whatever. This is not to say risk is required to be anything. Just because it was easier for someone to do something, doesn&amp;#x27;t mean they didn&amp;#x27;t do it. When billionaires become politicians, they are scrutinized heavily, but just cause they can buy things to get elected doesn&amp;#x27;t mean you have to choose them. Sure they have influence, you just wish the influence was on your side.&lt;/p&gt;&lt;p id=&quot;aa2f059a-670b-4c20-9eec-905c8b76f6c7&quot; class=&quot;&quot;&gt;You don&amp;#x27;t need to be doing whatever, you&amp;#x27;d just like the option.&lt;/p&gt;&lt;hr id=&quot;2d7902bc-0987-42d3-806d-98902ccba81d&quot; /&gt;&lt;p id=&quot;41477e6c-2646-4480-a1f9-81feba404fb8&quot; class=&quot;&quot;&gt;Signaling virtue signaling is also virtue signaling. (my initial problem in writing this —&amp;gt; which i outgrew)&lt;/p&gt;&lt;p id=&quot;1cec08c4-68fa-4b24-9d21-db746afe1592&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;bc7592ac-8b1b-4aa6-9b05-31ae7e9d9419&quot; class=&quot;&quot;&gt;Of course that isn&amp;#x27;t helpful information. Very impractical, and quite indefensible. People do signal things which are harmful to signal. And signaling that they are being harmful is fine, potentially its &lt;code&gt;privileged&lt;/code&gt; or whatever or maybe it makes you look better. But its fine.&lt;/p&gt;&lt;p id=&quot;7b337b93-ba5f-4f3f-b369-0e8c0cd4058e&quot; class=&quot;&quot;&gt;The truth is everyone does it. Just look for the BS.&lt;/p&gt;&lt;p id=&quot;c41a1e64-d980-46b0-a588-97f55ed29576&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;022629d3-ad2f-4e1c-8cc4-c19650c32ae2&quot; class=&quot;&quot;&gt;if someone advocates doing something they personally wouldn&amp;#x27;t do. go get em... or  run em out of business. also if they aren&amp;#x27;t eating their own sauces, don&amp;#x27;t eat their sauces. &lt;/p&gt;&lt;p id=&quot;29a95c13-1c2d-49bc-8b32-e4f326c21ad5&quot; class=&quot;&quot;&gt;if Silicon Valley ain&amp;#x27;t using their own tech ... if  some big food execs ain&amp;#x27;t eating their doritos  ... &lt;/p&gt;&lt;p id=&quot;f6af187a-80dd-4a7d-be95-b446f4a572bc&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;c5fe4f0a-c43c-4430-b019-7c7099405abd&quot; class=&quot;&quot;&gt;Mostly — understand that if someone &lt;code&gt;free&lt;/code&gt; does something. you want to be free and do that thing. not just do that thing. doing that thing may or may not be good for you in your situation.&lt;/p&gt;&lt;p id=&quot;dd375e70-9ce4-4fa6-92bd-2c0e17425751&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;0d6d0b9e-f4d9-42e1-8606-45cccd9e0a2f&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;/body&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Fractals 1: A Cartesian Approach to Meaning</title><link href="http://localhost:4000/posts/fractals1" rel="alternate" type="text/html" title="Fractals 1: A Cartesian Approach to Meaning" /><published>2020-04-26T17:00:16-04:00</published><updated>2020-04-26T17:00:16-04:00</updated><id>http://localhost:4000/posts/Fractals1</id><content type="html" xml:base="http://localhost:4000/posts/fractals1">&lt;style&gt;
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -617,9 +1251,11 @@ blockquote {
 
 &lt;body&gt;&lt;article id=&quot;1e14f1a5-fad7-406a-bebf-d2f08f06cecd&quot; class=&quot;page sans&quot;&gt;
 &lt;div class=&quot;page-body&quot;&gt;&lt;p id=&quot;2163198b-66bd-4051-a323-38481db89d0c&quot; class=&quot;&quot;&gt;
-&lt;/p&gt;&lt;nav id=&quot;bb880f9c-8d1c-4a73-8d95-4ca6184cfa42&quot; class=&quot;block-color-gray table_of_contents&quot;&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#b6b8ffef-7aeb-403b-93e3-d541a867551b&quot;&gt;What Descartes Said&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#6102a9a6-35a1-4f25-8c7e-ed14d562e1d4&quot;&gt;The Analogy of the Fridge&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#bf215d70-4de1-4c91-a03f-69022f501f88&quot;&gt;FRACTALS&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20&quot;&gt;Inside me there are galaxies&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#3739e36e-d36a-45e7-a7e1-83724e30f78a&quot;&gt;So what?&lt;/a&gt;&lt;/div&gt;&lt;/nav&gt;&lt;p id=&quot;d6321c41-0ac5-4b87-a5d6-4ee48cf55829&quot; class=&quot;&quot;&gt;Descartes’s &lt;i&gt;Meditations on First Philosophy&lt;/i&gt; gives a strong starting point to start thinking about the world and our relation to it. He demonstrates that what an individual knows for sure is exactly just that they exist: nothing more or less. Though this may seem like alarmingly little, we show that this type of thinking allows for the highest form of meaning. Here we give a quick summary of Descartes’s arguments in the first two meditations (considered the most important) and then (attempt to) consider the (most important) implications of his arguments.&lt;/p&gt;&lt;h2 id=&quot;b6b8ffef-7aeb-403b-93e3-d541a867551b&quot; class=&quot;&quot;&gt;What Descartes Said&lt;/h2&gt;&lt;p id=&quot;92ce139f-c080-4cea-ab21-6a9d4cd236c2&quot; class=&quot;&quot;&gt;In the true way of a philosopher or any logical entity, Descartes begins with questioning where he can begin. What can we take as fact? Surely, we need to be careful to not include our biases if we are to get to anything meaningful. But more than that, we need to really be sure we are beginning on solid ground. Descartes notes he can’t tell he is asleep when he is sleeping nor can he &lt;em&gt;a priori&lt;/em&gt; rule out the idea of a malicious God with the sole purpose of tricking him. Modern viewers may also throw in that it is unclear if we are in a simulation. These difficulties noted, we find that we can’t trust anything we see or hear. We can’t trust any of our beliefs either. We don’t have much to go off of!&lt;/p&gt;&lt;p id=&quot;3df7b8ea-b030-4d27-8880-a41f25cbbeca&quot; class=&quot;&quot;&gt;Descartes in his second mediation seizes upon the fixed point- we know that we think. Regardless if we are dreaming or if a demon is tricking us every sense and every thought, we are currently thinking. And since we think, we must exist at least as the one who thinks (we can define ourselves as the one thinking these thoughts and since the thoughts exists, so do we). &lt;em&gt;I think therefore I am&lt;/em&gt;. And furthermore, I only know I exist the moment I think and outside of that I can’t know for sure. Later he additionally argues that all we know about ourselves really is that we think and everything else is up for grabs. He also argues that whatever we can “clearly and distinctly” perceives also must exist but this line of thinking is more controversial, and we won’t employ it here.&lt;/p&gt;&lt;p id=&quot;d5013317-5d5a-485a-b0f0-a916df16d836&quot; class=&quot;&quot;&gt;
-&lt;/p&gt;&lt;figure id=&quot;8a779d28-4367-4f8f-8ddf-30dbe4ca13ed&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/The_Matrix_Poster.jpg&quot;&gt;&lt;img style=&quot;width:268px&quot; src=&quot;/images/The_Matrix_Poster.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 1: Keanu Reeves doesn&amp;#x27;t know he is in a simulation&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;6102a9a6-35a1-4f25-8c7e-ed14d562e1d4&quot; class=&quot;&quot;&gt;The Analogy of the Fridge&lt;/h2&gt;&lt;p id=&quot;4d27d228-368e-4dc2-8276-4c5aa5e21295&quot; class=&quot;&quot;&gt;So here we are. We each know that we ourselves exist, though the existence of anyone else is unclear (later philosophers will argue that since I know I exist, I can know you exist). This is a monumental moment for not only do we exist, but we know we exist. Existence has come to know itself as such. After a number of experiences, I have come to feel that knowing itself is an inevitable condition of existence, for if it wasn’t, would it even exist? We are reminded of the classic question of whether the fridge light is on when the fridge is closed (ignoring the presence of anything besides you and the fridge). Regardless of the answer, the fact we even theoretically can’t know renders the difference as insignificant to us. Reworded: the same quality that makes it unknowable to an observer makes it irrelevant to that observer. Analogously, existence that doesn’t know itself is irrelevant to itself.&lt;/p&gt;&lt;figure id=&quot;dbf0b354-248c-4a39-a7a5-8f84ec1248fb&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Fridge_Light.jpg&quot;&gt;&lt;img style=&quot;width:268px&quot; src=&quot;/images/Fridge_Light.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 2: A fridge light is useful for both a midnight snack and a metaphor&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;d9adcf41-29db-4552-b5fa-3a7916994ebc&quot; class=&quot;&quot;&gt;We are the observes of existence. But then, the argument above can be extended to say that the only relevant existence is that which we interact with. And we only really interact with that which is in our minds as we are beings of thought first and foremost, and thus this is only mode of interaction truly available to us. It is quickly apparent that relevant existence is that which we think about- and I mean we as individuals. We each only know ourselves in the truest sense. And so we come to a break through, existence (or at least the relevant part of it) is that which I can think about. This may feel like mental gymnastics, but if you start with the proposition that “I think so I exist and all I know is that I can think”, it follows quite naturally that the all of universe (that which exists) is exactly which I think about. Furthermore, these aren’t different things- they exist exactly because I can think about them and I can think about them because they exist.&lt;/p&gt;&lt;p id=&quot;37500855-fd1e-4eb0-8e54-d3adfe3e9c71&quot; class=&quot;&quot;&gt;Now you may think this is problematic. You may say “I can think about unicorns, but they don’t exist”. But in some sense, they do. What are you referring to as a unicorn? Why do you think they don’t exist? You define them as not existing since you believe you can’t perceive one, i.e. you’re defining reality by what can be sensed. But still, the unicorn at least has some formal existence as an idea. And why should a unicorn be any less real than a horse just because we don’t find them on earth? Because of a horn? True reality is in the idea itself, in what the unicorn represents- in what we sense around us, the truest portion isn’t their physical description but the patterns, meanings, and emotional significances they create inside us. We create existence by “observing” or considering an idea.&lt;/p&gt;&lt;figure id=&quot;6d396685-90a3-4e6e-8f3d-0e4d251a27f3&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Unicorn.jpg&quot;&gt;&lt;img style=&quot;width:570px&quot; src=&quot;/images/Unicorn.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 3: A unicorn. If a kid can imagine it, so can you.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;4893cec8-21f3-432b-ba24-10cfeb20f28a&quot; class=&quot;&quot;&gt;
-&lt;/p&gt;&lt;h2 id=&quot;bf215d70-4de1-4c91-a03f-69022f501f88&quot; class=&quot;&quot;&gt;FRACTALS&lt;/h2&gt;&lt;p id=&quot;d0a19741-d9dc-480b-96f6-7ae2e9ee9d5f&quot; class=&quot;&quot;&gt;And thus, in each of us is existence. This is highly nontrivial. In each of us is a version of everything. A metaphor for this idea is the ocean and a drop of the ocean. Ignoring atomic constraints, any drop of the ocean is in some way equivalent to the ocean for we just need to zoom in and then we can’t tell the difference (the concentration of all solutes is same in a representative drop as are all physical properties). Specially, a drop of water has all the information that the ocean does (metaphor is for just water and no organisms). The drop can have current, a water cycle, a hurricane, etc. The image is more than just wishful thinking- fractals are mathematical constructions with this exact property of infinite self-similarity. The fact that a fractal can be defined mathematically and there is nothing self-contradictory about an infinitely self-similar construct reveals some deep truth about reality. And far from being some simple shape which trivializes the question, these fractals can have infinitely complex structures as well.&lt;/p&gt;&lt;p id=&quot;206622f3-df19-494e-a0e1-92930f3cea0d&quot; class=&quot;&quot;&gt;We pause to highlight the amazingness of the infinite self-similarity. We could imagine that there are emergent properties that come from the pieces being together. But an infinitely self-similar shape has those same exact emergent properties already present in each piece, though at a smaller scale. No words can explain this better than watching an animation (and maybe learning the relevant math). Please note that this isn&amp;#x27;t just an animation you are watching but a mathematical truth for how this well defined set looks when zoomed in. &lt;/p&gt;&lt;figure id=&quot;a2d7f1a3-093c-45b4-abec-89bca8bf63a4&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 4: Zooming into the Mandelbrot set. Note the self-similarity and complexity.&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20&quot; class=&quot;&quot;&gt;Inside me there are galaxies&lt;/h2&gt;&lt;p id=&quot;335c1353-dbcd-4edf-89ac-39ae3be4c947&quot; class=&quot;&quot;&gt;Taken as a model for the relation of the human (the drop) to the universe (the ocean), we expect that we find everything to ever exist inside of us, albeit at different scales and orientation. All the plot lines to every book or movie, stars in distant planets and quarks in atoms, all feeling ever felt or will be felt all exist inside us, whether or not we are conscious of it. Though this may seem ridiculous at first, it in fact is extremely natural. The fact you can conceive of a planet in a different solar system means you have that inside you. The power of imagination is far more real than we usually realize- if the only objective reality we have is that fact we have thoughts, how can the thoughts we have be insignificant, as people often feel? People will think “So what if I can conceive of the moon, it nearly as real as being there”. But the approach we have taken here points to the exact opposite.&lt;/p&gt;&lt;p id=&quot;0c9fb1c1-dfcb-47fa-a78a-223b4260c956&quot; class=&quot;&quot;&gt;The reason we feel “being there” is more real than imagining being there is that we over value our sensory perception. Really, we define our reality by our sensory perception most of the time. This is the &lt;em&gt;modus operandi&lt;/em&gt; of the human race and, without going into the specifics, there are clear reasons it is that way. What I am pointing out is that for matters of meaning, purpose, and ideas beyond what we can label as actions necessary for survival, this absolute trust of the sense and lack of belief in that which is beyond the senses limits our potential. Surely, that which we perceive is a narrow subset of that which we can imagine. It is even a strict subset of that which we can imagine sensing.&lt;/p&gt;&lt;figure id=&quot;3dad0580-eb18-4270-94ff-0a7d7065d1d8&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Galaxy.jpg&quot;&gt;&lt;img style=&quot;width:788px&quot; src=&quot;/images/Galaxy.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 5: Galaxies are large and pretty. They exist inside each of us. (Picture courtesy the Hubble Telescope)&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;3739e36e-d36a-45e7-a7e1-83724e30f78a&quot; class=&quot;&quot;&gt;So what?&lt;/h2&gt;&lt;p id=&quot;30cfecff-5c3d-44e0-915e-899af3f271c4&quot; class=&quot;&quot;&gt;There are many implications of the realization that the universe exists inside each of us. Though your sensory reality may be affected by external factors, you are not a cog in the wheel, you are not a slave to the system, you are not an outsider to existence. I’m driving at a paradigm shift. Your universe would not exist without you. Maybe no one’s would. Sartre says “I am thus responsible for myself and for all men, and I am creating a certain image of man as I would have him to be. In fashioning myself I fashion man.” Each decision you make is a decision on behalf of all of existence, each difficulty you encounter is a difficulty encountered by all of existence, each loss you encounter is a loss to all of existence, each triumph you achieve is a victory for all of existence. The meaning you create is the only meaning that exists. The power of this realization cannot be understated.&lt;/p&gt;&lt;p id=&quot;b0d0b584-6a4a-4759-b204-b1c3dfe4becb&quot; class=&quot;&quot;&gt;Archimedes theorized with a large enough lever and exactly one fixed point for the fulcrum, he could move the planet with his finger. One fixed point and we can physically move planets! Let the realization that you truly exist and, in finding yourself existing, you also find all of existence inside you be the fixed point, which is unwavering in the face of anything else. From there, you are a conscious part of existence, and in choosing to be so, have the opportunity to create all meaning.&lt;/p&gt;&lt;figure id=&quot;ac15aa14-cc73-421d-94fd-b2014cc97ed7&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Archimedes_Lever.jpg&quot;&gt;&lt;img style=&quot;width:640px&quot; src=&quot;/images/Archimedes_Lever.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 6: Archimedes just doing his thing.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;46a84974-afc5-4aa3-ba63-94e121bab4c8&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;adf6253d-9ed4-4516-89d5-713244ceee0b&quot; class=&quot;&quot;&gt;Descartes’s &lt;em&gt;Meditations on First Philosophy&lt;/em&gt; gives a strong starting point to start thinking about the world and our relation to it. He demonstrates that what an individual knows for sure is exactly just that they exist: nothing more or less. Though this may seem like alarmingly little, we show that this type of thinking allows for the highest form of meaning. Here we give a quick summary of Descartes’s arguments in the first two meditations (considered the most important) and then (attempt to) consider the (most important) implications of his arguments.&lt;/p&gt;&lt;p id=&quot;b8ef51d8-8c83-487e-861c-4532b95fdc82&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;nav id=&quot;bb880f9c-8d1c-4a73-8d95-4ca6184cfa42&quot; class=&quot;block-color-gray table_of_contents&quot;&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#b6b8ffef-7aeb-403b-93e3-d541a867551b&quot;&gt;What Descartes Said&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#6102a9a6-35a1-4f25-8c7e-ed14d562e1d4&quot;&gt;The Analogy of the Fridge&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#bf215d70-4de1-4c91-a03f-69022f501f88&quot;&gt;FRACTALS&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20&quot;&gt;Inside me there are galaxies&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;table_of_contents-item table_of_contents-indent-0&quot;&gt;&lt;a class=&quot;table_of_contents-link&quot; href=&quot;#3739e36e-d36a-45e7-a7e1-83724e30f78a&quot;&gt;So what?&lt;/a&gt;&lt;/div&gt;&lt;/nav&gt;&lt;h2 id=&quot;b6b8ffef-7aeb-403b-93e3-d541a867551b&quot; class=&quot;&quot;&gt;What Descartes Said&lt;/h2&gt;&lt;blockquote id=&quot;ec010f7d-3ad0-4e6e-b73e-665248ab464f&quot; class=&quot;&quot;&gt;I shall then suppose, not that God who is supremely good and the fountain of truth, but some evil genius not less powerful than deceitful, has employed his whole energies in deceiving me; I shall consider that the heavens, the earth, colors, figures, sound, and all other external things are nought but the illusions and dreams of which this genius has availed himself in order to lay traps for my credulity. (Descartes)&lt;/blockquote&gt;&lt;p id=&quot;92ce139f-c080-4cea-ab21-6a9d4cd236c2&quot; class=&quot;&quot;&gt;In the true way of a philosopher or any logical entity, Descartes begins with questioning where he can begin. What can we take as fact? Surely, we need to be careful to not include our biases if we are to get to anything meaningful. But more than that, we need to really be sure we are beginning on solid ground. Descartes notes he can’t tell he is asleep when he is sleeping nor can he &lt;em&gt;a priori&lt;/em&gt; rule out the idea of a malicious God with the sole purpose of tricking him. Modern viewers may also throw in that it is unclear if we are in a simulation (Figure 1). These difficulties noted, we find that we can’t trust anything we see or hear. We can’t trust any of our beliefs either. We don’t have much to go off of!&lt;/p&gt;&lt;blockquote id=&quot;58340d82-dd90-4695-92b5-c2813df2d8b8&quot; class=&quot;&quot;&gt;We must come to the definite conclusion that this proposition: I am, I exist, is necessarily true each time that I pronounce it, or that I mentally conceive it. (Descartes)&lt;/blockquote&gt;&lt;p id=&quot;3df7b8ea-b030-4d27-8880-a41f25cbbeca&quot; class=&quot;&quot;&gt;Descartes in his second mediation seizes upon the fixed point- we know that we think. Regardless if we are dreaming or if a demon is tricking us every sense and every thought, we are currently thinking. And since we think, we must exist at least as the one who thinks (we can define ourselves as the one thinking these thoughts and since the thoughts exists, so do we). &lt;em&gt;I think therefore I am&lt;/em&gt;. And furthermore, I only know I exist the moment I think and outside of that I can’t know for sure. Later he additionally argues that all we know about ourselves really is that we think and everything else is up for grabs. He also argues that whatever we can “clearly and distinctly” perceives also must exist but this line of thinking is more controversial, and we won’t employ it here.&lt;/p&gt;&lt;p id=&quot;d5013317-5d5a-485a-b0f0-a916df16d836&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;figure id=&quot;8a779d28-4367-4f8f-8ddf-30dbe4ca13ed&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/The_Matrix_Poster.jpg&quot;&gt;&lt;img style=&quot;width:268px&quot; src=&quot;/images/The_Matrix_Poster.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 1: Keanu Reeves (Neo) doesn&amp;#x27;t know he is in a simulation&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;6102a9a6-35a1-4f25-8c7e-ed14d562e1d4&quot; class=&quot;&quot;&gt;The Analogy of the Fridge&lt;/h2&gt;&lt;p id=&quot;4d27d228-368e-4dc2-8276-4c5aa5e21295&quot; class=&quot;&quot;&gt;So here we are. We each know that we ourselves exist, though the existence of anyone else is unclear (later philosophers will argue that since I know I exist, I can know you exist). This is a monumental moment for not only do we exist, but we know we exist. Existence has come to know itself as such. After a number of experiences, I have come to feel that knowing itself is an inevitable condition of existence, for if it wasn’t, would it even exist? We are reminded of the classic question of whether the fridge light is on when the fridge is closed (ignoring the presence of anything besides you and the fridge, Figure 2). Regardless of the answer, the fact we even theoretically can’t know renders the difference as insignificant to us. Reworded: the same quality that makes it unknowable to an observer makes it irrelevant to that observer. Analogously, existence that doesn’t know itself is irrelevant to itself.&lt;/p&gt;&lt;figure id=&quot;dbf0b354-248c-4a39-a7a5-8f84ec1248fb&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Fridge_Light.jpg&quot;&gt;&lt;img style=&quot;width:268px&quot; src=&quot;/images/Fridge_Light.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 2: A fridge light is useful for both a midnight snack and a metaphor&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;d9adcf41-29db-4552-b5fa-3a7916994ebc&quot; class=&quot;&quot;&gt;We are the observes of existence. But then, the argument above can be extended to say that the only relevant existence is that which we interact with. And we only really interact with that which is in our minds as we are beings of thought first and foremost, and thus this is only mode of interaction truly available to us. It is quickly apparent that relevant existence is that which we think about- and I mean we as individuals. We each only know ourselves in the truest sense. And so we come to a break through, existence (or at least the relevant part of it) is that which I can think about. This may feel like mental gymnastics, but if you start with the proposition that “I think so I exist and all I know is that I can think”, it follows quite naturally that the all of universe (that which exists) is exactly which I think about. Furthermore, these aren’t different things- they exist exactly because I can think about them and I can think about them because they exist.&lt;/p&gt;&lt;p id=&quot;37500855-fd1e-4eb0-8e54-d3adfe3e9c71&quot; class=&quot;&quot;&gt;Now you may think this is problematic. You may say “I can think about unicorns, but they don’t exist”. But in some sense, they do. What are you referring to as a unicorn? Why do you think they don’t exist? You define them as not existing since you believe you can’t perceive one, i.e. you’re defining reality by what can be sensed. But still, the unicorn at least has some formal existence as an idea. And why should a unicorn be any less real than a horse just because we don’t find them on earth? Because of a horn? True reality is in the idea itself, in what the unicorn represents- in what we sense around us, the truest portion isn’t their physical description but the patterns, meanings, and emotional significances they create inside us. We create existence by “observing” or considering an idea.&lt;/p&gt;&lt;figure id=&quot;6d396685-90a3-4e6e-8f3d-0e4d251a27f3&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Unicorn.jpg&quot;&gt;&lt;img style=&quot;width:570px&quot; src=&quot;/images/Unicorn.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 3: A unicorn. If a kid can imagine it, so can you.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;4893cec8-21f3-432b-ba24-10cfeb20f28a&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;h2 id=&quot;bf215d70-4de1-4c91-a03f-69022f501f88&quot; class=&quot;&quot;&gt;FRACTALS&lt;/h2&gt;&lt;p id=&quot;d0a19741-d9dc-480b-96f6-7ae2e9ee9d5f&quot; class=&quot;&quot;&gt;And thus, in each of us is existence. This is highly nontrivial. In each of us is a version of everything. A metaphor for this idea is the ocean and a drop of the ocean. Ignoring atomic constraints, any drop of the ocean is in some way equivalent to the ocean for we just need to zoom in and then we can’t tell the difference (the concentration of all solutes is same in a representative drop as are all physical properties). Specially, a drop of water has all the information that the ocean does (metaphor is for just water and no organisms). The drop can have current, a water cycle, a hurricane, etc. The image is more than just wishful thinking- fractals are mathematical constructions with this exact property of infinite self-similarity. The fact that a fractal can be defined mathematically and there is nothing self-contradictory about an infinitely self-similar construct reveals some deep truth about reality. And far from being some simple shape which trivializes the question, these fractals can have infinitely complex structures as well.&lt;/p&gt;&lt;p id=&quot;206622f3-df19-494e-a0e1-92930f3cea0d&quot; class=&quot;&quot;&gt;We pause to highlight the amazingness of the infinite self-similarity. We could imagine that there are emergent properties that come from the pieces being together. But an infinitely self-similar shape has those same exact emergent properties already present in each piece, though at a smaller scale. No words can explain this better than watching an animation (and maybe learning the relevant math). Please note that this isn&amp;#x27;t just an animation you are watching but a mathematical truth for how this well defined set looks when zoomed in. &lt;/p&gt;&lt;figure id=&quot;a2d7f1a3-093c-45b4-abec-89bca8bf63a4&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 4: Zooming into the Mandelbrot set. This could go one infinitely and could be a much more crisp picture but we are limited in our compute resources, and this is enough to get the idea.&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20&quot; class=&quot;&quot;&gt;Inside me there are galaxies&lt;/h2&gt;&lt;blockquote id=&quot;130ce0b6-1d49-41c9-9056-ea38fa174979&quot; class=&quot;&quot;&gt;I am large, I contain multitudes. (Walt Whitman)&lt;/blockquote&gt;&lt;blockquote id=&quot;ed6b1f13-630d-4a6b-9207-def7fb574b5e&quot; class=&quot;&quot;&gt;I saw my Lord with the eye of my heart, and I said &amp;quot;Who are you?&amp;quot; and he said &amp;quot;Your Self.&amp;quot; (attributed to Mansur Al-Hallaj 858-922 CE)&lt;/blockquote&gt;&lt;blockquote id=&quot;cb826186-f5c1-4f66-ab80-78e38ce9bd92&quot; class=&quot;&quot;&gt;Hence this life of yours which you are living is not merely a piece of the entire existence, but is in a certain sense the whole (Erwin Schrödinger)&lt;/blockquote&gt;&lt;p id=&quot;0cf38098-b6ea-435d-bb10-33d295dd3ede&quot; class=&quot;&quot;&gt;
+&lt;/p&gt;&lt;p id=&quot;335c1353-dbcd-4edf-89ac-39ae3be4c947&quot; class=&quot;&quot;&gt;Taken as a model for the relation of the human (the drop) to the universe (the ocean), we expect that we find everything to ever exist inside of us, albeit at different scales and orientation. All the plot lines to every book or movie, stars in distant planets and quarks in atoms, all feeling ever felt or will be felt all exist inside us, whether or not we are conscious of it. Though this may seem ridiculous at first, it in fact is extremely natural. The fact you can conceive of a planet in a different solar system means you have that inside you. The power of imagination is far more real than we usually realize- if the only objective reality we have is that fact we have thoughts, how can the thoughts we have be insignificant, as people often feel? People will think “So what if I can conceive of the moon, it&amp;#x27;s not nearly as real as being there”. But the approach we have taken here points to the exact opposite.&lt;/p&gt;&lt;p id=&quot;0c9fb1c1-dfcb-47fa-a78a-223b4260c956&quot; class=&quot;&quot;&gt;The reason we feel “being there” is more real than imagining being there is that we overvalue our sensory perception. Really, we define our reality by our sensory perception most of the time. This is the &lt;em&gt;modus operandi&lt;/em&gt; of the human race and, without going into the specifics, there are clear reasons it is that way. What I am pointing out is that for matters of meaning, purpose, and ideas beyond what we can label as actions necessary for survival, this absolute trust of the sense and lack of belief in that which is beyond the senses limits our potential. Surely, that which we perceive is a narrow subset of that which we can imagine. It is even a strict subset of that which we can imagine sensing.&lt;/p&gt;&lt;figure id=&quot;3dad0580-eb18-4270-94ff-0a7d7065d1d8&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Galaxy.jpg&quot;&gt;&lt;img style=&quot;width:788px&quot; src=&quot;/images/Galaxy.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 5: Galaxies are large and pretty. They exist inside each of us. (Picture courtesy the Hubble Telescope)&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2 id=&quot;3739e36e-d36a-45e7-a7e1-83724e30f78a&quot; class=&quot;&quot;&gt;So what?&lt;/h2&gt;&lt;p id=&quot;30cfecff-5c3d-44e0-915e-899af3f271c4&quot; class=&quot;&quot;&gt;There are many implications of the realization that the universe exists inside each of us. Though your sensory reality may be affected by external factors, you are not a cog in the wheel, you are not a slave to the system, you are not an outsider to existence. I’m driving at a paradigm shift. Your universe would not exist without you. Maybe no one’s would. Sartre says “I am thus responsible for myself and for all men, and I am creating a certain image of man as I would have him to be. In fashioning myself I fashion man.” Each decision you make is a decision on behalf of all of existence, each difficulty you encounter is a difficulty encountered by all of existence, each loss you encounter is a loss to all of existence, each triumph you achieve is a victory for all of existence. The meaning you create is the only meaning that exists. The power of this realization cannot be understated.&lt;/p&gt;&lt;p id=&quot;b0d0b584-6a4a-4759-b204-b1c3dfe4becb&quot; class=&quot;&quot;&gt;Archimedes theorized with a large enough lever and exactly one fixed point for the fulcrum, he could move the planet with his finger. One fixed point and we can physically move planets! Descartes connects this fixed point to his point of departure: &amp;quot;Cogito, ergo sum&amp;quot;.  Let the realization that you necessarily exist and, in finding yourself existing, you also find all of existence inside you be the fixed point, which is unwavering in the face of anything else. From there, you are a conscious part of existence, and in choosing to be so, have the opportunity to create all meaning.&lt;/p&gt;&lt;figure id=&quot;ac15aa14-cc73-421d-94fd-b2014cc97ed7&quot; class=&quot;image&quot;&gt;&lt;a href=&quot;/images/Archimedes_Lever.jpg&quot;&gt;&lt;img style=&quot;width:640px&quot; src=&quot;/images/Archimedes_Lever.jpg&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;Figure 6: Archimedes just doing his thing.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p id=&quot;46a84974-afc5-4aa3-ba63-94e121bab4c8&quot; class=&quot;&quot;&gt;
 &lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;/body&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dissonance</title><link href="http://localhost:4000/2020/04/26/dissonance.html" rel="alternate" type="text/html" title="Dissonance" /><published>2020-04-26T00:00:00-04:00</published><updated>2020-04-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/04/26/dissonance</id><content type="html" xml:base="http://localhost:4000/2020/04/26/dissonance.html">&lt;style&gt;
 /* webkit printing magic: print all background colors */
 html {

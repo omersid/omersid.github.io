@@ -1,8 +1,0 @@
-I"}<style>
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-</style>
-
-:ET

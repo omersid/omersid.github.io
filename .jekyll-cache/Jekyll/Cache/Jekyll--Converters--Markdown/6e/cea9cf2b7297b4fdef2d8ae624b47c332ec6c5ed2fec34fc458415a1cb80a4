@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Fractals 1: A Cartesian Approach to Meaning | Lost in the Sauce</title>
-<meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Fractals 1: A Cartesian Approach to Meaning" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change." />
-<meta property="og:description" content="Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change." />
-<link rel="canonical" href="http://localhost:4000/posts/fractals1" />
-<meta property="og:url" content="http://localhost:4000/posts/fractals1" />
-<meta property="og:site_name" content="Lost in the Sauce" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-04-26T17:00:16-04:00" />
-<script type="application/ld+json">
-{"headline":"Fractals 1: A Cartesian Approach to Meaning","dateModified":"2020-04-26T17:00:16-04:00","datePublished":"2020-04-26T17:00:16-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/fractals1"},"description":"Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change.","@type":"BlogPosting","url":"http://localhost:4000/posts/fractals1","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Lost in the Sauce" /></head>
-<body><header class="site-header" role="banner">
-
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Lost in the Sauce</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Fractals 1: A Cartesian Approach to Meaning</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2020-04-26T17:00:16-04:00" itemprop="datePublished">Apr 26, 2020
-      </time></p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <style>
+I"g<style>
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -670,35 +623,4 @@ blockquote {
 </p><h2 id="bf215d70-4de1-4c91-a03f-69022f501f88" class="">FRACTALS</h2><p id="d0a19741-d9dc-480b-96f6-7ae2e9ee9d5f" class="">And thus, in each of us is existence. This is highly nontrivial. In each of us is a version of everything. A metaphor for this idea is the ocean and a drop of the ocean. Ignoring atomic constraints, any drop of the ocean is in some way equivalent to the ocean for we just need to zoom in and then we can’t tell the difference (the concentration of all solutes is same in a representative drop as are all physical properties). Specially, a drop of water has all the information that the ocean does (metaphor is for just water and no organisms). The drop can have current, a water cycle, a hurricane, etc. The image is more than just wishful thinking- fractals are mathematical constructions with this exact property of infinite self-similarity. The fact that a fractal can be defined mathematically and there is nothing self-contradictory about an infinitely self-similar construct reveals some deep truth about reality. And far from being some simple shape which trivializes the question, these fractals can have infinitely complex structures as well.</p><p id="206622f3-df19-494e-a0e1-92930f3cea0d" class="">We pause to highlight the amazingness of the infinite self-similarity. We could imagine that there are emergent properties that come from the pieces being together. But an infinitely self-similar shape has those same exact emergent properties already present in each piece, though at a smaller scale. No words can explain this better than watching an animation (and maybe learning the relevant math). Please note that this isn&#x27;t just an animation you are watching but a mathematical truth for how this well defined set looks when zoomed in. </p><figure id="a2d7f1a3-093c-45b4-abec-89bca8bf63a4" class="image"><a href="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif" /></a><figcaption>Figure 4: Zooming into the Mandelbrot set. This could go one infinitely and could be a much more crisp picture but we are limited in our compute resources, and this is enough to get the idea.</figcaption></figure><h2 id="e3fbc3a1-5df4-4728-a78c-2eddb0a5ad20" class="">Inside me there are galaxies</h2><blockquote id="130ce0b6-1d49-41c9-9056-ea38fa174979" class="">I am large, I contain multitudes. (Walt Whitman)</blockquote><blockquote id="ed6b1f13-630d-4a6b-9207-def7fb574b5e" class="">I saw my Lord with the eye of my heart, and I said &quot;Who are you?&quot; and he said &quot;Your Self.&quot; (attributed to Mansur Al-Hallaj 858-922 CE)</blockquote><blockquote id="cb826186-f5c1-4f66-ab80-78e38ce9bd92" class="">Hence this life of yours which you are living is not merely a piece of the entire existence, but is in a certain sense the whole (Erwin Schrödinger)</blockquote><p id="0cf38098-b6ea-435d-bb10-33d295dd3ede" class="">
 </p><p id="335c1353-dbcd-4edf-89ac-39ae3be4c947" class="">Taken as a model for the relation of the human (the drop) to the universe (the ocean), we expect that we find everything to ever exist inside of us, albeit at different scales and orientation. All the plot lines to every book or movie, stars in distant planets and quarks in atoms, all feeling ever felt or will be felt all exist inside us, whether or not we are conscious of it. Though this may seem ridiculous at first, it in fact is extremely natural. The fact you can conceive of a planet in a different solar system means you have that inside you. The power of imagination is far more real than we usually realize- if the only objective reality we have is that fact we have thoughts, how can the thoughts we have be insignificant, as people often feel? People will think “So what if I can conceive of the moon, it&#x27;s not nearly as real as being there”. But the approach we have taken here points to the exact opposite.</p><p id="0c9fb1c1-dfcb-47fa-a78a-223b4260c956" class="">The reason we feel “being there” is more real than imagining being there is that we overvalue our sensory perception. Really, we define our reality by our sensory perception most of the time. This is the <em>modus operandi</em> of the human race and, without going into the specifics, there are clear reasons it is that way. What I am pointing out is that for matters of meaning, purpose, and ideas beyond what we can label as actions necessary for survival, this absolute trust of the sense and lack of belief in that which is beyond the senses limits our potential. Surely, that which we perceive is a narrow subset of that which we can imagine. It is even a strict subset of that which we can imagine sensing.</p><figure id="3dad0580-eb18-4270-94ff-0a7d7065d1d8" class="image"><a href="/images/Galaxy.jpg"><img style="width:788px" src="/images/Galaxy.jpg" /></a><figcaption>Figure 5: Galaxies are large and pretty. They exist inside each of us. (Picture courtesy the Hubble Telescope)</figcaption></figure><h2 id="3739e36e-d36a-45e7-a7e1-83724e30f78a" class="">So what?</h2><p id="30cfecff-5c3d-44e0-915e-899af3f271c4" class="">There are many implications of the realization that the universe exists inside each of us. Though your sensory reality may be affected by external factors, you are not a cog in the wheel, you are not a slave to the system, you are not an outsider to existence. I’m driving at a paradigm shift. Your universe would not exist without you. Maybe no one’s would. Sartre says “I am thus responsible for myself and for all men, and I am creating a certain image of man as I would have him to be. In fashioning myself I fashion man.” Each decision you make is a decision on behalf of all of existence, each difficulty you encounter is a difficulty encountered by all of existence, each loss you encounter is a loss to all of existence, each triumph you achieve is a victory for all of existence. The meaning you create is the only meaning that exists. The power of this realization cannot be understated.</p><p id="b0d0b584-6a4a-4759-b204-b1c3dfe4becb" class="">Archimedes theorized with a large enough lever and exactly one fixed point for the fulcrum, he could move the planet with his finger. One fixed point and we can physically move planets! Descartes connects this fixed point to his point of departure: &quot;Cogito, ergo sum&quot;.  Let the realization that you necessarily exist and, in finding yourself existing, you also find all of existence inside you be the fixed point, which is unwavering in the face of anything else. From there, you are a conscious part of existence, and in choosing to be so, have the opportunity to create all meaning.</p><figure id="ac15aa14-cc73-421d-94fd-b2014cc97ed7" class="image"><a href="/images/Archimedes_Lever.jpg"><img style="width:640px" src="/images/Archimedes_Lever.jpg" /></a><figcaption>Figure 6: Archimedes just doing his thing.</figcaption></figure><p id="46a84974-afc5-4aa3-ba63-94e121bab4c8" class="">
 </p></div></article></body>
-
-  </div><a class="u-url" href="/posts/fractals1" hidden></a>
-</article>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Lost in the Sauce</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Lost in the Sauce</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
-</div>
-
-      <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. Lost in the sauce is a temporary blog name, subject to change.</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
-</body>
-
-</html>
+:ET
