@@ -4,3 +4,6 @@
 
 layout: home
 ---
+
+SCRIPT USAGE
+python3 bin/converter.py --input_file file.html --title name --date 2020-05-19
