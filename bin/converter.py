@@ -7,13 +7,13 @@ title:  "XXXXXXX"
 date:   2020-05-17 17:00:16 -0400
 categories: thoughts
 layout: post
-permalink: /posts/red-queen-blues
+permalink: /posts/XXXXXXX
 --- 
 """
 
 # STUFF TO REMOVE
 REMOVE = [ 
-    "body {\n\tmargin: 0;\n\tpadding: 0;\n}",
+    "body {\n\tline-height: 1.5;\n\twhite-space: pre-wrap;\n}",
     "text-decoration: underline;",
     '</html>',
     '</head>'
