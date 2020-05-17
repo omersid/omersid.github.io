@@ -1,6 +1,6 @@
 ---
 title:  "Red Queen Blues + Happiness"
-date:   2020-05-01 17:00:16 -0400
+date:   2020-05-17 17:00:16 -0400
 categories: thoughts
 layout: post
 permalink: /posts/red-queen-blues
@@ -28,15 +28,9 @@ body {
 	}
 }
 
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
 a,
 a.visited {
 	color: inherit;
-	text-decoration: underline;
 }
 
 .pdf-relative-link-path {
